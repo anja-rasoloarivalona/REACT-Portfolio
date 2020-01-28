@@ -72,7 +72,10 @@ const Sidebar = props => {
             <div className="sidebar__socialMedia">
                 <ul className="sidebar__socialMedia__list">
                     <li className="sidebar__socialMedia__list__item">
-                        <IconSvg />
+                        <IconSvg icon="github"/>
+                    </li>
+                    <li className="sidebar__socialMedia__list__item">
+                        <IconSvg icon="linkedin"/>
                     </li>
                 </ul>
             </div>

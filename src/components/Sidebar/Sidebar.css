@@ -52,6 +52,7 @@
 
 .sidebar__list {
     width: 87%;
+    flex: 1;
 }
 
 .sidebar__list__item {
@@ -109,6 +110,42 @@
     color: var(--color-primary)
 }
 
+
+.sidebar__socialMedia {
+    width: 87%;
+    height: 6.5rem;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
+    3px 2px 5px rgba(94, 104, 121, .288);
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.sidebar__socialMedia__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sidebar__socialMedia__list__item {
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
+    3px 2px 5px rgba(94, 104, 121, .288);
+    margin: 0 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+}
+
+.sidebar__socialMedia__list__item svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary);
+    cursor: pointer;
+}
 
 
 
