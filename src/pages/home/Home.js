@@ -51,12 +51,41 @@ class Home extends Component {
     }
 
     render() {
-        const {triggerAnimation1, triggerAnimation2} = this.state
+        const {triggerAnimation1, triggerAnimation2} = this.state;
+        const currentLanguage = this.props.language;
+        console.log('home', currentLanguage)
+
             return (
-                <div className="home">            
+                <div className="home">   
+
                     <section className="home__section"
                             ref={ el => this.home = el}>
                         
+                        <div className="language">
+
+                            <div className="language__option language__option--fr">
+                                <div className="language__option__name">
+                                    FR
+                                </div>
+                                <div className={`language__option__status ${currentLanguage === 'fr' ? 'active' : ''}`}>
+                                </div>
+                            </div>
+
+                            <div className={`language__switch ${currentLanguage === 'fr' ? 'fr' : 'en'}`}
+                                 onClick={this.props.toggleLanguageHandler}>
+                                <div className="language__switch__btn">
+                                </div>
+                            </div>
+
+                            <div className="language__option language__option--en">
+                                <div className={`language__option__status ${currentLanguage === 'en' ? 'active' : ''}`}>
+                                </div>
+                                <div className="language__option__name">
+                                    EN
+                                </div>
+                                
+                            </div>
+                        </div>
                         <div className="home__section__subtitle">
                             Hello, my name is Anja Rasoloarivalona
                         </div>

@@ -15,6 +15,12 @@
 
 
   --font-primary: 'Open Sans', sans-serif;
+
+
+  --shadow : -3px -3px 7px rgba(255, 255, 255, 0.451), 
+   3px 3px 7px rgba(94, 104, 121, .288);
+   --shadow-inset : inset -3px -3px 7px rgba(255, 255, 255, 0.451), 
+   inset 3px 3px 7px rgba(94, 104, 121, .288);
 }
 
 *,

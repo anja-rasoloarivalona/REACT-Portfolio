@@ -8,8 +8,7 @@
     margin: auto;
     border-radius: 2rem;
     background : var(--color-grey-light);
-    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.451), 
-    inset 3px 2px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--shadow-inset);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,8 +62,7 @@
     cursor: pointer;
     margin-bottom: 2rem;
     border-radius: 10px;
-    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
-    3px 1px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--shadow);
     position: relative;
     transition: all .3s ease-in;
 }
@@ -98,8 +96,7 @@
     position: absolute;
     background: transparent;
     border-radius: 10px;
-    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.451), 
-    inset 3px 2px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--shadow-inset);
 }
 
 .sidebar__list__item.active svg {
@@ -114,8 +111,7 @@
 .sidebar__socialMedia {
     width: 87%;
     height: 6.5rem;
-    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
-    3px 2px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--shadow);
     border-radius: 10px;
     margin: 2rem 0;
 }
@@ -129,8 +125,7 @@
 }
 
 .sidebar__socialMedia__list__item {
-    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
-    3px 2px 5px rgba(94, 104, 121, .288);
+    box-shadow: var(--shadow);
     margin: 0 1rem;
     border-radius: 50%;
     display: flex;

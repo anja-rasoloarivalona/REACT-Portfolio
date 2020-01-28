@@ -8,7 +8,8 @@ class App extends Component {
   state = {
     activeSection: 'home',
     sectionsPos: null, 
-    lastPos: 0
+    lastPos: 0,
+    language: 'fr'
   }
 
   
@@ -78,12 +79,20 @@ class App extends Component {
     this.setState( {sectionsPos : data }, () => window.addEventListener('scroll', this.listenToScroll)  )
   }
 
+  toggleLanguageHandler = () => {
+    let currentLanguage = this.state.language;
+    let newLanguage = currentLanguage === 'fr' ? 'en' : 'fr';
+    this.setState({ language: newLanguage})
+  }
+
   render() {
 
     return (
       <div className="App">
         <Sidebar activeSection={this.state.activeSection}/>
-      <Home setSectionsPos = {this.setSectionsPos}/>
+        <Home setSectionsPos = {this.setSectionsPos}
+              language={this.state.language}
+              toggleLanguageHandler={this.toggleLanguageHandler}/>
       </div>
     )
   }

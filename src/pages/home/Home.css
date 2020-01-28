@@ -14,6 +14,86 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+}
+
+.language {
+    position: absolute;
+    top: 0rem;
+    right: 5rem;
+    width: 20rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language__switch {
+    width: 10rem;
+    height: 3rem;
+    box-shadow: var(--shadow);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.language__switch::after {
+    content: '';
+    width: 95%;
+    height: 95%;
+    box-shadow: var(--shadow-inset);
+    border-radius: 3rem;
+    
+}
+
+.language__switch__btn {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: var(--color-grey);
+    box-shadow: var(--shadow);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all .3s ease;
+}
+
+.language__switch.fr .language__switch__btn {
+    left: .9rem;
+    transform: none;
+}
+
+.language__switch.en .language__switch__btn {
+    transform: translateX(3.1rem);
+}
+
+.language__option {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language__option--fr {
+    margin-right: 1rem;
+}
+
+.language__option--en {
+    margin-left: 1rem;
+}
+.language__option__status {
+    width: .5rem;
+    height: .5rem;
+    background: grey;
+    border-radius: 50%;
+}
+
+.language__option__status.active {
+    background: green;
 }
 
 .home__section__subtitle {
@@ -25,7 +105,7 @@
 .home__section__title {
     font-size: 6rem;
     font-weight: 600;
-    color: var(--color-grey);
+    color: var(--color-primary);
     margin: 1rem 0;
 
     max-width: 66.2rem;
@@ -94,7 +174,7 @@
 }
 
 .home__section__title__secondary span {
-    background: var(--color-white);
+    background: var(--color-grey);
 }
 
 .home__section__title__secondary--2 {
@@ -210,7 +290,7 @@
     transform: translateX(1rem);
     width: 50rem;
     height: 100%;
-    background: var(--color-white);
+    background: var(--color-grey);
     
 }
 
