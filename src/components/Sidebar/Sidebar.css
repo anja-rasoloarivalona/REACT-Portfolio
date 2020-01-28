@@ -1,0 +1,114 @@
+.sidebar {
+    height: calc(100% - 4rem);
+    width : 25rem;
+    position: fixed;
+    top: 1rem;
+    bottom: 1rem;
+    left: 3rem;
+    margin: auto;
+    border-radius: 2rem;
+    background : var(--color-grey-light);
+    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.451), 
+    inset 3px 2px 5px rgba(94, 104, 121, .288);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.sidebar__head {
+    width: 87%;
+    height: 6rem;
+    display: flex;
+    align-items: center;  
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+  
+}
+
+
+
+.sidebar__head__img {
+    width: 5rem;
+    height: 7rem;
+    background-image: url('../../assets/img/prof.jpg');
+    background-position: center;
+    background-size: cover;
+    margin-right: 1.5rem;
+    border-radius: 5px;
+}
+
+
+.sidebar__head__name {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.sidebar__list {
+    width: 87%;
+}
+
+.sidebar__list__item {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.451), 
+    3px 1px 5px rgba(94, 104, 121, .288);
+    position: relative;
+    transition: all .3s ease-in;
+}
+
+.sidebar__list__item__info {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__list__item svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #a29fad;
+    margin-right: 1.7rem;
+}
+
+.sidebar__list__item span {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: #bdb9ce;
+    text-transform: capitalize;
+}
+
+
+.sidebar__list__item.active:after {
+    content: '';
+    height: 99%;
+    width: 99%;
+    position: absolute;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: inset -3px -3px 7px rgba(255, 255, 255, 0.451), 
+    inset 3px 2px 5px rgba(94, 104, 121, .288);
+}
+
+.sidebar__list__item.active svg {
+   fill: var(--color-primary)
+}
+
+.sidebar__list__item.active span {
+    color: var(--color-primary)
+}
+
+
+
+

@@ -1,0 +1,246 @@
+.home {
+    margin-left: 30rem;
+   
+
+}
+
+.home > * {
+    font-family: var(--font-primary);
+}
+
+.home__section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home__section__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.home__section__title {
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--color-grey);
+    margin: 1rem 0;
+
+    max-width: 66.2rem;
+    width: 60%;
+    height: 8.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+@keyframes home__section__title__container__anim1 {
+    0% {
+        transform: translateX(11rem);
+    }
+
+    50% {
+        transform: translateX(31rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes home__section__title__container__anim2 {
+    0% {
+        transform: translateX(0rem);
+    }
+
+    50% {
+        transform: translateX(31rem);
+    }
+
+    100% {
+        transform: translateX(11rem);
+    }
+}
+
+.home__section__title__container {
+        
+     width: 100%;
+     display: flex;
+     transform: translateX(11rem);
+}
+
+.home__section__title.anim1 .home__section__title__container {
+    transition: all .3s ease-in;
+    animation:  home__section__title__container__anim1 1.5s forwards;
+}
+
+.home__section__title.anim2 .home__section__title__container {
+    transition: all .3s ease-in;
+    animation:  home__section__title__container__anim2 1.5s forwards;
+}
+
+.home__section__title__container span {
+    padding-left: 1rem;
+}
+
+.home__section__title__secondary {
+    position: relative;
+}
+
+.home__section__title__secondary span {
+    background: var(--color-white);
+}
+
+.home__section__title__secondary--2 {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+
+
+@keyframes home__section__title__secondary--fade {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes home__section__title__secondary--appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.home__section__title.anim1 .home__section__title__secondary--1 {
+    transition: all .3s;
+    animation: home__section__title__secondary--fade .3s forwards;
+    animation-delay: .5s;
+}
+
+.home__section__title.anim2 .home__section__title__secondary--1 {
+    animation: home__section__title__secondary--appear  .9s forwards ease-in;
+    
+}
+
+
+.home__section__title.anim1 .home__section__title__secondary--2 {
+    transition: all .3s;
+    animation: home__section__title__secondary--appear .3s forwards;
+    animation-delay: .5s;
+}
+
+.home__section__title.anim2 .home__section__title__secondary--2 {
+    animation: home__section__title__secondary--fade  .9s forwards ease-in;
+}
+
+@keyframes home__section__title__writter__container--anim1 {
+    0% {
+        transform: translateX(-9rem);
+       
+    }
+
+    50%{
+        transform: translateX(-20rem);
+    }
+
+    100% {
+        transform: translateX(-1rem);
+    }
+}
+
+@keyframes home__section__title__writter__container--anim2 {
+    0% {
+        transform: translateX(-1rem);
+       
+    }
+
+    50%{
+        transform: translateX(-20rem);
+    }
+
+    100% {
+        transform: translateX(-9rem);
+    }
+}
+.home__section__title__writter__container {
+    width: 1rem;
+    height: 100%;
+    position: relative;
+    transform: translateX(-9rem);
+    
+}
+
+.home__section__title.anim1  .home__section__title__writter__container {
+    transition: all .3s ease-in;
+    animation: home__section__title__writter__container--anim1 1.5s forwards;
+   
+}
+
+.home__section__title.anim2  .home__section__title__writter__container {
+    transition: all .3s ease-in;
+    animation: home__section__title__writter__container--anim2 1.5s forwards;
+   
+}
+.home__section__title__writter {
+    position: absolute;
+    right: 0rem;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: rgb(70, 69, 69);
+}
+
+
+.home__section__title__writter__hidder {
+    transform: translateX(1rem);
+    width: 50rem;
+    height: 100%;
+    background: var(--color-white);
+    
+}
+
+
+
+
+.home__section__para {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2rem;
+} 
+
+
+
+
+
+
+.home__section__cta {
+    display: flex;
+}
+
+.home__section--red {
+    background: violet;
+}
+
+.home__section--green {
+    background: green;
+}
+
+.home__section--salmon {
+    background:salmon;
+}
+

@@ -1,0 +1,39 @@
+:root {
+  /* COLOR */ 
+  --color-white : #fff;
+
+  --color-primary: rgb(49, 78, 140);;
+
+  --color-dark: #1a1a1a;
+  --color-dark-light: #313131;
+  --color-secondary: #04776e;
+
+
+
+  --color-grey: rgb(233, 233, 233);
+  --color-grey-light: rgb(233, 233, 233);
+
+
+  --font-primary: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background : var(--color-grey)
+}
+
+
+/***--color-grey: #E3E9F7;
+  --color-grey-light: #DFE6F6***/
