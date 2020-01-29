@@ -1,0 +1,13 @@
+.skillsContainer {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.skills {
+    border-radius: 2rem;
+    width: 95%;
+    height: 95%;
+    box-shadow: var(--shadow-inset);
+}

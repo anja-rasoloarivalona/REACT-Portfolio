@@ -37,6 +37,7 @@
     box-shadow: var(--shadow);
     position: relative;
     transition: all .3s ease-in;
+    text-decoration: none;
 }
 
 .sidebar__list__item__info {
@@ -61,7 +62,8 @@
 }
 
 
-.sidebar__list__item.active:after {
+.sidebar__list__item.active:after,
+.sidebar__list__item:focus:after {
     content: '';
     height: 99%;
     width: 99%;
@@ -71,11 +73,13 @@
     box-shadow: var(--shadow-inset);
 }
 
-.sidebar__list__item.active svg {
+.sidebar__list__item.active svg,
+.sidebar__list__item:focus svg  {
    fill: var(--color-primary)
 }
 
-.sidebar__list__item.active span {
+.sidebar__list__item.active span,
+.sidebar__list__item:focus span {
     color: var(--color-primary)
 }
 

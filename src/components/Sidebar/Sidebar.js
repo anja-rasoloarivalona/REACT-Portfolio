@@ -1,31 +1,29 @@
 import React from 'react'
 import './Sidebar.css';
 import IconSvg from '../../utilities/svg/svg';
+import { NavLink} from 'react-router-dom';
 
-
-
-const Sidebar = props => {
-    let activeSection = props.activeSection;
+const Sidebar = () => {
     let navigationItems = [
-        // {
-        //     nav: 'home',
-        //     icon: 'home'
-        // },
         {
-            nav: 'about',
-            icon: 'user'
+            nav: 'about me',
+            icon: 'user',
+            path: '/'
         },
         {
-            nav: 'portfolio',
-            icon: 'briefcase'
+            nav: 'projects',
+            icon: 'briefcase',
+            path: '/projects'
         },
         {
             nav: 'skills',
-            icon: 'cogs'
+            icon: 'cogs',
+            path: '/skills'
         },
         {
             nav: 'contact',
-            icon: 'chat'
+            icon: 'chat',
+            path: '/contact'
         },
 
     ]
@@ -35,17 +33,18 @@ const Sidebar = props => {
             <div className="sidebar__body">
                 <ul className="sidebar__list">
                     {navigationItems.map( (item, index) => (
-                        <li className={`sidebar__list__item
-                            ${activeSection === item.nav ? 'active': ''}`}
-                            key={index}>
-
+                        <NavLink className={`sidebar__list__item`}
+                                key={index}
+                                to={item.path}
+                                exact
+                        >
                             <div className="sidebar__list__item__info">
                                 <IconSvg icon={item.icon}/>
                                 <span>{item.nav}</span>
                             </div>
 
 
-                        </li>
+                        </NavLink>
                     ))
                     }
                 </ul>

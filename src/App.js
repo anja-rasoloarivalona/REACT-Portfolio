@@ -1,84 +1,42 @@
 import React, { Component } from 'react'
 import Sidebar from './components/Sidebar/Sidebar';
-import Header from './components/Header/Header'
+import Header from './components/Header/Header';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import './App.css';
-import Home from './pages/home/Home';
+
+
+import About from './pages/About/About';
+import Projects from './pages/Projects/Projects';
+import Skills from './pages/Skills/Skills';
+import Contact from './pages/Contact/Contact';
+
 
 class App extends Component {
 
   state = {
-    activeSection: 'about',
-    sectionsPos: null, 
-    lastPos: 0,
-    language: 'fr'
+    language: 'fr',
+    currentSection: 'about me'
   }
 
-  
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
-  }
-
-  listenToScroll = () => {
-
-    const {sectionsPos, lastPos} = this.state;
-    let scrollPos = window.pageYOffset; 
-
-    let scrollDirection = '';
-
-    if( scrollPos > lastPos){
-      scrollDirection = 'bottom'
-    } else {
-      scrollDirection = 'top'
+  componentDidMount(){
+    let currentSection = this.props.location.pathname.substring(1);
+    if(currentSection === ''){
+      currentSection = 'about me'
     }
+    this.setState({ currentSection })
+  }
 
-    const sectionName = Object.keys(sectionsPos);
-
-   sectionName.forEach( section => {
-
-      if(scrollDirection === 'bottom'){
-        if(scrollPos >= sectionsPos[section].min  && scrollPos <= sectionsPos[section].max){
-          this.setState({
-            lastPos: scrollPos,
-            activeSection: section
-          }, () => console.log(this.state.activeSection))
-        } 
-        else {
-          this.setState({
-            lastPos: scrollPos
-          })
-        }
-      }
-
-      if(scrollDirection === 'top' &&  (this.state.lastPos - scrollPos) > 200 ){
-        let previousSection;   
-        let activeSectionIndex = sectionName.findIndex( el => el === this.state.activeSection);
-        if(activeSectionIndex !== 0){
-          previousSection = sectionName[activeSectionIndex - 1]
-        } else {
-          previousSection = sectionName[0]
-        }
-        let previousSectionTrigger = sectionsPos[previousSection].min + ( (sectionsPos[previousSection].max - sectionsPos[previousSection].min) / 2 )
-  
-        if(scrollPos <= previousSectionTrigger )  {
-          this.setState({
-            lastPos: scrollPos,
-            activeSection: previousSection
-          }, () => console.log(this.state.activeSection))
-        } else {
-          this.setState({
-            lastPos: scrollPos
-          })
-        }
-      }
-      
-    })
-
+  componentDidUpdate(){
+   let currentSection = this.props.location.pathname.substring(1);
+    if(currentSection === ''){
+      currentSection = 'about me'
+    }
+    if(currentSection !== this.state.currentSection){
+      this.setState({ currentSection })
+    }
     
   }
 
-  setSectionsPos = data => {
-    this.setState( {sectionsPos : data }, () => window.addEventListener('scroll', this.listenToScroll)  )
-  }
 
   toggleLanguageHandler = () => {
     let currentLanguage = this.state.language;
@@ -91,14 +49,20 @@ class App extends Component {
     return (
       <div className="app">
         <Header language={this.state.language}
-                toggleLanguageHandler={this.toggleLanguageHandler}/>
+                toggleLanguageHandler={this.toggleLanguageHandler}
+                currentSection={this.state.currentSection}/>
         <Sidebar activeSection={this.state.activeSection}/>
-        <Home setSectionsPos = {this.setSectionsPos}
-              />
+
+        <Switch>
+          <Route exact path="/" component={About}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/skills" component={Skills}/>
+          <Route path="/Contact" component={Contact}/>
+        </Switch>
       </div>
     )
   }
 }
 
 
-export default App;
+export default withRouter(App);

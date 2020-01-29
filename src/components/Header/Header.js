@@ -1,7 +1,8 @@
 import React from 'react'
 import './Header.css'
 const Header = props => {
-    const currentLanguage = props.language
+    const currentLanguage = props.language;
+    const currentSection = props.currentSection
     return (
         <header className="header">
             <div className="header__profileContainer">
@@ -13,8 +14,7 @@ const Header = props => {
                 </div>
                 
             </div>
-            <div className="header__title">About me</div>
-
+             <div className="header__title">{currentSection}</div>
             <div className="header__languageContainer">
                 <div className="language">
                     <div className="language__option language__option--fr">

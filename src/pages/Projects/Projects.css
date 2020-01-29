@@ -1,0 +1,13 @@
+.projectsContainer {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.projects {
+    border-radius: 2rem;
+    width: 95%;
+    height: 95%;
+    box-shadow: var(--shadow-inset);
+}
