@@ -59,10 +59,8 @@ class Home extends Component {
                 <div className="home">   
 
                     <section className="home__section"
-                            ref={ el => this.home = el}>
-                        
+                            ref={ el => this.home = el}> 
                         <div className="language">
-
                             <div className="language__option language__option--fr">
                                 <div className="language__option__name">
                                     FR
@@ -85,41 +83,6 @@ class Home extends Component {
                                 </div>
                                 
                             </div>
-                        </div>
-                        <div className="home__section__subtitle">
-                            Hello, my name is Anja Rasoloarivalona
-                        </div>
-                        <div className={`home__section__title 
-                                        ${triggerAnimation1  ? 'anim1': ''}
-                                        ${triggerAnimation2  ? 'anim2': ''}`}>
-                            
-                            
-                            <div className="home__section__title__container">
-                                <span className="home__section__title__main">I'm a </span>
-                                <div  className="home__section__title__secondary">
-                                    <span className="home__section__title__secondary--1">Developer</span>
-                                    <span className="home__section__title__secondary--2">Business Analyst</span>
-                                </div>
-                                
-                            </div>
-
-
-                            <div className="home__section__title__writter__container">
-                                <div className="home__section__title__writter"></div>
-                                <div className="home__section__title__writter__hidder"></div>
-                            </div>
-                            
-                        </div>
-                        <p className="home__section__para">
-                            I am passionate about creating elegant, unique and functional websites and applications. If you have something in mind, feel free to contact me! In the meantime, enjoy your little ride in my portfolio.
-                        </p>
-                        <div className="home__section__cta">
-                            <Button color="grey">
-                                Portfolio
-                            </Button>
-                            <Button color="grey">
-                                Hire me
-                            </Button>
                         </div>
                     </section>
                     <section className="home__section"

@@ -7,10 +7,10 @@ import IconSvg from '../../utilities/svg/svg';
 const Sidebar = props => {
     let activeSection = props.activeSection;
     let navigationItems = [
-        {
-            nav: 'home',
-            icon: 'home'
-        },
+        // {
+        //     nav: 'home',
+        //     icon: 'home'
+        // },
         {
             nav: 'about',
             icon: 'user'
@@ -34,51 +34,45 @@ const Sidebar = props => {
         <div className="sidebar">    
 
             <div className="sidebar__head">
-
                 <div className="sidebar__head__img">
+                    <div className="sidebar__head__status"></div>
                 </div>
                  <div className="sidebar__head__name">
                     Anja Rasoloarivalona
                  </div>
-
-                {
-                    /**
-                      
-                    <div className="sidebar__head__title">
-                        Developer & Business Analyst
-                    </div>                  
-                     */
-                }
-                
             </div>  
 
-            <ul className="sidebar__list">
-                {navigationItems.map( (item, index) => (
-                    <li className={`sidebar__list__item
-                        ${activeSection === item.nav ? 'active': ''}`}
-                        key={index}>
+            <div className="sidebar__body">
+                <ul className="sidebar__list">
+                    {navigationItems.map( (item, index) => (
+                        <li className={`sidebar__list__item
+                            ${activeSection === item.nav ? 'active': ''}`}
+                            key={index}>
 
-                        <div className="sidebar__list__item__info">
-                            <IconSvg icon={item.icon}/>
-                            <span>{item.nav}</span>
-                        </div>
+                            <div className="sidebar__list__item__info">
+                                <IconSvg icon={item.icon}/>
+                                <span>{item.nav}</span>
+                            </div>
 
 
-                    </li>
-                ))
-                }
-            </ul>
-
-            <div className="sidebar__socialMedia">
-                <ul className="sidebar__socialMedia__list">
-                    <li className="sidebar__socialMedia__list__item">
-                        <IconSvg icon="github"/>
-                    </li>
-                    <li className="sidebar__socialMedia__list__item">
-                        <IconSvg icon="linkedin"/>
-                    </li>
+                        </li>
+                    ))
+                    }
                 </ul>
+
+                <div className="sidebar__socialMedia">
+                    <ul className="sidebar__socialMedia__list">
+                        <li className="sidebar__socialMedia__list__item">
+                            <IconSvg icon="github"/>
+                        </li>
+                        <li className="sidebar__socialMedia__list__item">
+                            <IconSvg icon="linkedin"/>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
+            
         </div>
     )
 }
