@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Sidebar from './components/Sidebar/Sidebar';
+import Header from './components/Header/Header'
 import './App.css';
 import Home from './pages/home/Home';
 
 class App extends Component {
 
   state = {
-    activeSection: 'home',
+    activeSection: 'about',
     sectionsPos: null, 
     lastPos: 0,
     language: 'fr'
@@ -88,11 +89,12 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="app">
+        <Header language={this.state.language}
+                toggleLanguageHandler={this.toggleLanguageHandler}/>
         <Sidebar activeSection={this.state.activeSection}/>
         <Home setSectionsPos = {this.setSectionsPos}
-              language={this.state.language}
-              toggleLanguageHandler={this.toggleLanguageHandler}/>
+              />
       </div>
     )
   }

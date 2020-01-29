@@ -40,6 +40,12 @@ body {
   background : var(--color-grey)
 }
 
+.app {
+  display: grid;
+  grid-template-columns: 27rem 1fr 10rem;
+  grid-template-rows: 10rem calc(100vh - 10rem);
+}
+
 
 /***--color-grey: #E3E9F7;
   --color-grey-light: #DFE6F6***/

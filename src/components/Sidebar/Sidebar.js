@@ -32,16 +32,6 @@ const Sidebar = props => {
 
     return (
         <div className="sidebar">    
-
-            <div className="sidebar__head">
-                <div className="sidebar__head__img">
-                    <div className="sidebar__head__status"></div>
-                </div>
-                 <div className="sidebar__head__name">
-                    Anja Rasoloarivalona
-                 </div>
-            </div>  
-
             <div className="sidebar__body">
                 <ul className="sidebar__list">
                     {navigationItems.map( (item, index) => (
