@@ -37,13 +37,11 @@ html {
 }
 
 body {
-  background : var(--color-grey)
+  /* background : var(--color-grey) */
 }
 
 .app {
-  display: grid;
-  grid-template-columns: 27rem 1fr 10rem;
-  grid-template-rows: 10rem calc(100vh - 10rem);
+ 
 }
 
 
