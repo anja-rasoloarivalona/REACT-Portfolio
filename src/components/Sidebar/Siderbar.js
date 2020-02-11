@@ -8,10 +8,13 @@ class Siderbar extends Component {
         return (
             <div className="sidebar">
                 <header className="sidebar__header">
-
+                    <div className="sidebar__header__imageContainer">
+                        <div className="sidebar__header__image"></div>
+                        <div className="sidebar__header__status"></div>
+                    </div>
+                    <div className="sidebar__header__name">Anja Rasoloarivalona</div>
                 </header>
                 <nav className="sidebar__nav">
-
                     <ul className="sidebar__nav__list">
                         <NavLink to="/" exact>
                             <div className="sidebar__nav__list__item">
@@ -61,9 +64,16 @@ class Siderbar extends Component {
                                 <div className="sidebar__nav__list__item__design__inner"></div>
                             </div>
                         </NavLink>
-                    </ul>
-                    
+                    </ul>                   
                 </nav>
+                <div className="sidebar__social">
+                    <div className="sidebar__social__icon">
+                        <IconSvg icon="linkedin"/>
+                    </div>
+                    <div className="sidebar__social__icon">
+                        <IconSvg icon="github"/>
+                    </div>
+                </div>
             </div>
         )
     }
