@@ -33,9 +33,52 @@ body {
 }
 
 .app {
- 
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden; 
+}
+
+.app.started {
+  animation: appScroll .3s ease-in forwards;
+  animation-delay: 3s;
+}
+@keyframes appScroll{
+  0% {
+    height: 100vh;
+    overflow-y: hidden; 
+  }
+  100% {
+    height: unset;
+  overflow-y: scroll;
+  }
 }
 
 
-/***--color-grey: #E3E9F7;
-  --color-grey-light: #DFE6F6***/
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+.app__mounting {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.app__container {
+  transform: translateX(100vw);
+  background: var(--color-white);
+  width: calc(100vw - 20rem);
+  margin-left: 20rem;
+  min-height: 200vh;
+  transition: all 2s ease-in;
+}
+
+.app.started .app__container {
+   transform: translateX(0);  
+}
+
+
+
+

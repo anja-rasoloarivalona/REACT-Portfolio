@@ -4,16 +4,12 @@ import { NavLink } from 'react-router-dom';
 import IconSvg from '../../utilities/svg/svg'
 
 class Siderbar extends Component {
+
     render() {
+        const started = this.props.started
+
         return (
-            <div className="sidebar">
-                <header className="sidebar__header">
-                    <div className="sidebar__header__imageContainer">
-                        <div className="sidebar__header__image"></div>
-                        <div className="sidebar__header__status"></div>
-                    </div>
-                    <div className="sidebar__header__name">Anja Rasoloarivalona</div>
-                </header>
+            <div className={`sidebar ${started ? 'started': ''}`}>
                 <nav className="sidebar__nav">
                     <ul className="sidebar__nav__list">
                         <NavLink to="/" exact>
