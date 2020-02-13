@@ -3,11 +3,43 @@
     grid-row: 2 / 3;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
-.contact {
-    border-radius: 2rem;
-    width: 95%;
-    height: 95%;
-    box-shadow: var(--shadow-inset);
+.contact__form {
+    width: 50rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    background: rgb(199, 199, 199);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.contact__form__group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact__form .input .textarea {
+    width: 47rem;
+    resize: vertical;
+    min-height: 10rem;
+    background: var(--color-white);
+    max-height: 20rem;
+    font-size: var(--font-size-md);
+    font-family: var(--font-primary)
+}
+
+.contact__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13rem;
+    background: rgb(199, 199, 199);
 }

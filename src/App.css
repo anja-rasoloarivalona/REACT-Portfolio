@@ -29,6 +29,7 @@ html {
 
 body {
   font-family: var(--font-primary);
+  box-sizing: border-box;
   /* background : var(--color-grey) */
 }
 
@@ -67,12 +68,14 @@ body {
 
 
 .app__container {
-  transform: translateX(100vw);
+  /* transform: translateX(100vw); */
   background: var(--color-white);
   width: calc(100vw - 20rem);
   margin-left: 20rem;
   min-height: 200vh;
   transition: all 2s ease-in;
+  z-index: 1;
+  position: relative;
 }
 
 .app.started .app__container {
