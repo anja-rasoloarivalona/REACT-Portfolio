@@ -42,5 +42,13 @@
 <path d="M2 12h6v18h-6v-18z"></path>
 <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
 </symbol>
+<symbol id="icon-arrow-down" viewBox="0 0 213.333 213.333">
+<title>arrow-down</title>
+<g>
+	<g>
+		<polygon points="0,53.333 106.667,160 213.333,53.333 		"/>
+	</g>
+</g>
+</symbol>
 </defs>
 </svg>

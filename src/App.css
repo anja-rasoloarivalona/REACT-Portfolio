@@ -76,10 +76,21 @@ body {
   transition: all 2s ease-in;
   z-index: 1;
   position: relative;
+
+
 }
 
 .app.started .app__container {
    transform: translateX(0);  
+}
+
+.app__container .drop-down-list {
+  width: 9rem;
+  position: absolute;
+  top: 1.7rem;
+  right: 1.5rem;
+  background: var(--color-primary);
+  z-index: 10
 }
 
 

@@ -43,7 +43,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    transform: translateY(-41vh);  
+    transform: translateY(-43vh);  
     transition: all .3s ease-in;
     display: flex;
     align-items: center;
