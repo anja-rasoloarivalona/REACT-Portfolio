@@ -5,14 +5,16 @@
     align-items: center;
     background: var(--color-primary);
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     position: relative;
     transition: all 1s ease-in;
-    /* background: salmon; */
+
+
+    width: 20rem
 }
 
 .landing-page.started {
-    animation: landingPageGoSmall 1s ease-in forwards;
+    /* animation: landingPageGoSmall 1s ease-in forwards; */
     animation-delay: 1s;
 }
 
@@ -70,7 +72,6 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-    padding: .5rem;
     border-radius: 2rem;
     transition: all .3s ease-in;
     height: 6rem;
@@ -78,7 +79,13 @@
     top: 0;
     bottom: 0;
     margin: auto;
- 
+
+
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    background: var(--color-white);
+    transform: translateY(-41vh);
 }
 
 .landing-page.started .landing-page__header {
@@ -86,7 +93,6 @@
     width: 4.3rem;
     height: 4.3rem;
     background: var(--color-white);
-    top: 2rem;
     transform: translateY(-41vh);
 }
 
@@ -102,7 +108,7 @@
   }
 
   .landing-page.mounted .landing-page__header__name {
-    animation: headerNameFadeIn .3s ease-in forwards;
+    /* animation: headerNameFadeIn .3s ease-in forwards; */
     animation-delay: 1s;
   }
 
@@ -227,6 +233,9 @@
 .landing-page button {
     transform: translateY(4rem);
     opacity: 0;
+
+
+    display: none;
 }
 
 .landing-page.mounted button {
