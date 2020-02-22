@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Contact.css';
-import Input from '../../components/Input/Input'
+import Input from '../../components/Input/Input';
+import IconSvg from '../../utilities/svg/svg'
 
 class Contact extends Component {
 
@@ -103,6 +104,30 @@ class Contact extends Component {
                                 
                             <input class="button button--secondary" id="email-submit" type="submit" value="Send" />
                     </form>
+
+
+          
+                        <ul className="contact__infos-list">
+                           <li className="conact__infos-list__item">
+                                <div className="contact__infos-list__item__icon">
+                                    <IconSvg icon="phone"/>
+                                </div>
+                                <span>+1 438 896 2026</span>
+                           </li>
+                           <li className="conact__infos-list__item">
+                                <div className="contact__infos-list__item__icon">
+                                    <IconSvg icon="mail"/>
+                                </div>
+                                <span>rasoloanja@gmail.com</span>
+                           </li>
+                           <li className="conact__infos-list__item">
+                                <div className="contact__infos-list__item__icon">
+                                    <IconSvg icon="pin"/>
+                                </div>
+                                <span>Montreal, H4A 2S7</span>
+                           </li>
+                        </ul>
+                  
                 </div>
             )
         

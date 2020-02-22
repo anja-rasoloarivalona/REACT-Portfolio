@@ -17,7 +17,7 @@
 }
 
 .drop-down-list__value {
-    background-color: var(--color-primary);
+    background-color: transparent;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -28,28 +28,28 @@
     border-bottom-right-radius: 5px;
     cursor: pointer;
     z-index: 10;
-    color: var(--color-white);
+    color: var(--color-primary);
+    font-size: var(--font-size-md);
 }
 
 .drop-down-list__value svg {
     width: .8rem;
     height: .8rem;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 1rem;
     fill: var(--color-white);
-    transition: all .3s ease-in
+    transition: all .3s ease-in;
+    margin-left: 2rem;
 }
 
 .drop-down-list.show .drop-down-list__value {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;   
+    background-color: var(--color-primary);
+    color: var(--color-white)
 }
 
 .drop-down-list.show .drop-down-list__value svg {
     transform: rotate(-180deg);
+    fill: var(--color-white)
 }
 
 .drop-down-list.show .drop-down-list__value {
