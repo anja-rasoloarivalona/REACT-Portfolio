@@ -37,8 +37,8 @@ class Contact extends Component {
 
             return (
                 <div className="contactContainer">  
-                      <header class="contact__header">
-
+                      <header className="contact__header">
+                            <h1 className="contact__header__title">Get in touch</h1>
                       </header>
                      <form action="https://formspree.io/rasoloanja@gmail.com" method="POST" class="contact__form">
                                 <div class="contact__form__group">
@@ -102,7 +102,7 @@ class Contact extends Component {
                                             onChange={this.onChangeInput}
                                         />
                                 
-                            <input class="button button--secondary" id="email-submit" type="submit" value="Send" />
+                            <input class="button button--primary" id="email-submit" type="submit" value="Send" />
                     </form>
 
 
