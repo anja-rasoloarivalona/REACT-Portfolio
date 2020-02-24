@@ -2,12 +2,221 @@
     grid-column: 2 / -1;
     grid-row: 2 / 3;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .skills {
-    border-radius: 2rem;
-    width: 95%;
-    height: 95%;
-    box-shadow: var(--shadow-inset);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.skills__title {
+    grid-column: 1 / -1;
+    margin: auto;
+    padding: 3rem 0;
+    padding-left: 8rem;
+    font-size: 4rem;
+    color: var(--color-primary);
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.skills__wrapper {
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-template-rows: repeat(auto-fit, 43rem);
+    grid-auto-rows: 43rem;
+    grid-gap: 3rem;
+    padding: 3rem;
+    margin-top: 2rem;  
+}
+
+
+
+.skills__container {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 1rem;
+    position: relative;
+    transition: all .3s ease-in;
+    color: var(--color-white);
+    border-radius: .5rem;
+}
+
+.skills__container--front {
+    background: #42318C;
+}
+
+.skills__container--back {
+    background: #15112C;
+}
+
+.skills__container--business {
+    background: #1E4855;
+}
+
+.skills__container__title {
+    margin-bottom: 1rem;
+}
+.skills__container div {
+    transition: all .3s ease-in;
+}
+
+.skills__container:hover {
+    transform: scale(1.05);
+}
+
+.skills__container:hover div {
+    opacity: 0;
+}
+
+.skills__container__list {
+    list-style: none;
+}
+
+.skills__container__list__item{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all .3s ease-in;
+    
+}
+
+.skills__container:hover .skills__container__list__item {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+
+.skills__container__draw {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 21rem;
+    height: 16rem;
+}
+
+.skills__container__draw--front {
+    border: 3px solid white;
+    position: absolute;
+    background: transparent;
+   
+}
+
+.skills__container__draw--front__1, 
+.skills__container__draw--front__3 {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+} 
+
+.skills__container__draw--front__1 {
+    right: 4rem;
+}
+
+.skills__container__draw--front__2 {
+    width: 13rem;
+    height: 4rem;
+    border-radius: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.skills__container__draw--front__3 {
+    bottom: 0;
+    left: 4rem;
+}
+
+.skills__container__draw--back {
+    background: transparent;
+    border: 4px solid white;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+   
+}
+
+.skills__container__draw--back__1,
+.skills__container__draw--back__2 {
+    width: 8rem;
+    height: 8rem;
+}
+
+.skills__container__draw--back__3,
+.skills__container__draw--back__4 {
+    width: 5rem;
+    height: 5rem;
+}
+
+.skills__container__draw--back__1 {
+    transform: translate(-50%, -50%);
+}
+.skills__container__draw--back__2 {
+    transform: translate(49%, 49%);
+}
+.skills__container__draw--back__3 {
+    transform: translate(50%, -50%);
+}
+.skills__container__draw--back__4 {
+    transform: translate(-50%, 50%);
+}
+
+.skills__container__draw--business__1,
+.skills__container__draw--business__2,
+.skills__container__draw--business__3{
+    position: absolute;
+    margin: auto;
+}
+
+.skills__container__draw--business {
+    background: #1E4855;
+}
+
+
+.skills__container__draw--business__1 {
+    left: 1.5rem;
+    bottom: .5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 3px solid var(--color-white)
+}
+
+.skills__container__draw--business__2 {
+    width: 13rem;
+    height: 4rem;
+    border: 3px solid white;
+    background: transparent;
+    transform: rotate(30deg);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.skills__container__draw--business__3 {
+    top: 1rem;
+    right: 3.9rem;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border: 3px solid var(--color-white)
+}
+
+
