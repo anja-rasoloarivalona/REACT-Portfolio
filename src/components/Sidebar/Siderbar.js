@@ -31,10 +31,10 @@ class Siderbar extends Component {
                                 <div className="sidebar__nav__list__item__design__inner"></div>
                             </div>
                         </NavLink>
-                        <NavLink to="portfolio">
+                        <NavLink to="projects">
                             <div className="sidebar__nav__list__item">
                                 <IconSvg icon="briefcase"/>
-                                <span>portfolio</span>
+                                <span>projects</span>
                             </div>  
                             <div className="sidebar__nav__list__item__design sidebar__nav__list__item__design--top">
                                 <div className="sidebar__nav__list__item__design__inner"></div>

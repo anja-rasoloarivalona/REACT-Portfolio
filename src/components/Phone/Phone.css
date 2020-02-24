@@ -1,0 +1,65 @@
+.phone {
+    margin-top: 6rem;
+    width: 27rem;
+    height: 58rem;
+    background: rgb(17, 17, 17);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 6px 8px 20px -9px rgba(41,41,41,1);
+}
+
+.phone__top {
+    width: 100%;
+    height: calc( (100% -  (26rem * 1.775)) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.phone__top__circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--color-white);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 32%;
+}
+
+.phone__top__bar {
+    width: 17%;
+    height: .4rem;
+    background: var(--color-white);
+    border-radius: .5rem;
+}
+
+
+.phone__screen {
+    width: 26rem;
+    height: calc(26rem * 1.775);
+    background-position: center;
+    background-size: cover;
+    border-radius: .2rem;
+}
+
+.phone__bottom {
+    height: calc( (100% -  (26rem * 1.775)) / 2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone__bottom__btn {
+    width:  4rem;
+    height:  4rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+}

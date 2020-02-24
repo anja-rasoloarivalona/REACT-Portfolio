@@ -1,13 +1,142 @@
-.projectsContainer {
+.projects {
     grid-column: 2 / -1;
     grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 2rem;
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: proximity;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y proximity;
+}
+
+.projects::-webkit-scrollbar {
+    display: none;
+}
+
+
+.project {
+    width: 100%;
+    padding-left: 8rem;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.project__info {
+width: 55%;
+}
+
+
+.project__info__title {
+    align-self: flex-start;
+    padding: 3rem 0;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-size: 4rem;
+}
+
+.project__info__desc {
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    text-align: justify;
+    color: var(--color-grey);
+    margin-bottom: 5rem;
+}
+
+.project__info__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+    padding: 1rem 0;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all .3s ease-in;
+    box-shadow: none;
+}
+
+.project__info__cta:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-.5rem);
+    box-shadow: 2px 27px 20px -16px rgba(92,92,92,1);
+}
+
+.project__info__cta:active {
+    transform: translateY(-1px); /*related to the initial link) */
+    box-shadow: 0 .5rem 1rem rgba(black,.2); 
+}
+
+
+.project__info__cta:hover svg {
+    fill: var(--color-white)
+}
+
+.project__info__cta svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: var(--color-primary)
+}
+
+.project__img {
+    width: 45%;
+    padding-top: 4rem;
     display: flex;
     justify-content: center;
 }
 
-.projects {
-    border-radius: 2rem;
-    width: 95%;
-    height: 95%;
-    box-shadow: var(--shadow-inset);
+.project__img .phone__screen.phone__screen--trimmo {
+    background-image: url("../../assets/img/trimmo.PNG");
+}
+
+.project__img .phone__screen.phone__screen--triano {
+    background-image: url('../../assets/img/triano.PNG');
+}
+
+.project__img .phone__screen.phone__screen--weather{
+    background-image: url('../../assets/img/weather.PNG');
+}
+
+
+
+
+
+.project__info__framework {
+    width: 40%;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.project__info__framework__title {
+   padding: 1rem 0;
+   background: var(--color-grey);
+   color: var(--color-white);
+   padding-left: 1rem;
+}
+
+.project__info__framework__list {
+    list-style: none;
+    border-left: 1px solid var(--color-grey);
+    border-right: 1px solid var(--color-grey);
+    border-bottom: 1px solid var(--color-grey);
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.project__info__framework__list__item {
+    padding: 1.2rem 0;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.project__info__framework__list__item:not(:last-child){
+    border-bottom: 1px solid rgb(230, 230, 230);
 }
