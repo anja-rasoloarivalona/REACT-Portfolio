@@ -29,13 +29,45 @@
 width: 55%;
 }
 
+.project__info__logs-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+    background: var(--color-grey);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.project__info__logs-toggler svg {
+    width: 2rem;
+    height: 2rem;
+    fill: rgb(250, 233, 3);
+    margin-left: .5rem;
+    
+}
+
 
 .project__info__title {
     align-self: flex-start;
     padding: 3rem 0;
-    text-transform: uppercase;
     color: var(--color-primary);
+}
+
+.project__info__title--woto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project__info__title h1 {
     font-size: 4rem;
+    text-transform: uppercase;
+}
+
+h1.project__info__title {
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 
 .project__info__desc {
@@ -139,4 +171,170 @@ width: 55%;
 
 .project__info__framework__list__item:not(:last-child){
     border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+
+.project--woto__frameworkContainer {
+    margin-top: 11.5rem;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.project--woto__framework {
+    width: 70%;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.project--woto__framework__list {
+    list-style: none;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    border-left: 1px solid var(--color-grey);
+    border-right: 1px solid var(--color-grey);
+    border-bottom: 1px solid var(--color-grey);
+    margin-bottom: 3rem;
+}
+
+.project--woto__framework__list__item {
+    padding: 1.2rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project--woto__framework__list__item__value {
+    color: var(--color-grey)
+}
+
+.project--woto__framework__list__item:not(:last-child){
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+
+
+
+.project__info__gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__info__gallery__item {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+}
+
+.project__info__gallery__item__title {
+    padding: 1rem;
+    background: green;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+.project__info__gallery__item__img {
+    width: 100%;
+    height: calc(35rem * 0.536585);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.project__info__gallery__item__img--client {
+    background-image: url('../../assets/img/woto-client.PNG');
+    margin-bottom: 6rem;
+}
+
+.project__info__gallery__item__img--admin {
+    background-image: url('../../assets/img/woto-admin.PNG');
+}
+
+.project__woto__loginContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.712);
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.project__woto__loginContainer.show {
+    z-index: 5;
+    transform: translateY(0);
+}
+
+.project__woto__login {
+    width: 25%;
+    overflow: hidden;
+    background: var(--color-white);
+    height: min-content;
+    
+    transform: translateY(20rem);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.project__woto__loginContainer.show .project__woto__login {
+    opacity: 1;
+    transform: translateY(12rem);
+}
+
+.project__woto__login__cta {
+    background: var(--color-white);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.project__woto__login h2 {
+    padding: 2rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.project__woto__login__part {
+    padding: 1rem 0;
+    padding-left: 2rem;
+    background: var(--color-white);
+}
+
+
+.project__woto__login__part__title {
+    margin-bottom: 1rem;
+    color: var(--color-primary)
+}
+
+.project__woto__login__part__list {
+    list-style: none;
+    font-size: 1.2rem;
+    
+}
+
+.project__woto__login__part__list__item {
+    display: flex;
+}
+
+.project__woto__login__part__list__item__value {
+    color: var(--color-grey)
+}
+
+.project__woto__login__part__list__item:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.project__woto__login__part__list__item__key {
+    margin-right: 2rem;
+    width: 8rem;
+    
 }

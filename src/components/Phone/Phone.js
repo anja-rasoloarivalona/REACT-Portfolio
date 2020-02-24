@@ -9,7 +9,7 @@ const Phone = props => {
                 <div className="phone__top__circle"></div>
                 <div className="phone__top__bar"></div>
             </div>
-            <div className={`phone__screen phone__screen--${props.image}`}></div>
+            <div className={`phone__screen phone__screen--${props.image}`} onClick={props.openProject}></div>
             <div className="phone__bottom">
                 <div className="phone__bottom__btn"></div>
             </div>
