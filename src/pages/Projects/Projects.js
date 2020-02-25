@@ -28,9 +28,6 @@ class Projects extends Component {
     }
 
     handleClick = e => { 
-        console.log('click');
-        
-        
         if(this.target && this.target.contains(e.target)){
             return
         } else {
@@ -44,7 +41,12 @@ class Projects extends Component {
 
     render() {  
         
-        const {showWotoLogs} = this.state
+        const {showWotoLogs} = this.state;
+        let windowWidth =  window.innerWidth;
+        
+
+
+        
             return (
                 <div className="projects"> 
 
@@ -101,9 +103,7 @@ class Projects extends Component {
                             <p className="project__info__desc">
                                 <FormattedMessage id="wotoDescription" defaultMessage="Woto was my first real project, and by far the most complex. Woto is a car dealership built by a friend of mine. In order to help his business, I created all the necessary tools: the customer portal allowing users to consult the vehicles and save them in their account as well as a back office allowing a given administrator to manipulate all the data without coding."/>
                             </p>
-
                             <div className="project__info__gallery">
-
                                 <div className="project__info__gallery__item">
                                     <div className="project__info__gallery__item__title">
                                         <h3>Client</h3>
@@ -117,12 +117,10 @@ class Projects extends Component {
                                     </h3>
                                     <div className="project__info__gallery__item__img project__info__gallery__item__img--admin">
                                     </div>
-                                </div>
-                                
-                               
+                                </div>                                        
                             </div>
+                        
                         </div>
-
                         <div className="project--woto__frameworkContainer">
                             <div className="project--woto__framework">
                                 <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
@@ -171,18 +169,23 @@ class Projects extends Component {
                             </a>
                             </div>
                            
-                        </div>
-                        
-                        
+                        </div>                
                     </div>
+
+
                     <div className="project">
 
                         <div className="project__info">
+
                             <h1 className="project__info__title">Trimmo Real Estate</h1>
                             <p className="project__info__desc">
                                 <FormattedMessage id="trimmoRealEstate" defaultMessage="Trimmo real estate is a fictitious real estate agency based in Canada. Users can consult the different properties based on price, type, number of bathrooms but mostly on location. As a bonus, they can view all this data on google map."/>
                             </p>
-
+                            {windowWidth < 1168 && (
+                                <div className="project__img">
+                                    <Phone image="trimmo" openProject={() => window.open('https://trimmo-real-estate.web.app/')}></Phone>
+                                </div>
+                            )}                            
                             <div className="project__info__framework">
                                 <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
@@ -197,7 +200,6 @@ class Projects extends Component {
                                     </li>
                                 </ul>
                             </div>
-
                             <a className="project__info__cta"
                                 onClick={() => window.open('https://trimmo-real-estate.web.app/')}
                             >
@@ -205,9 +207,13 @@ class Projects extends Component {
                                 <span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span>
                             </a>
                         </div>
-                        <div className="project__img">
-                            <Phone image="trimmo" openProject={() => window.open('https://trimmo-real-estate.web.app/')}></Phone>
-                        </div>
+
+                        {windowWidth >= 1168 && (
+                            <div className="project__img">
+                                <Phone image="trimmo" openProject={() => window.open('https://trimmo-real-estate.web.app/')}></Phone>
+                            </div>
+                        )}     
+                        
                         
                     </div>
 
@@ -219,6 +225,11 @@ class Projects extends Component {
                             <p className="project__info__desc">
                                 <FormattedMessage id="trianoRestaurant" defaultMessage="Triano Restaurant is a fictional restaurant based in Montreal. When I developed this website, my goal was to practice as well as to diversify my project portfolio."/>
                             </p>
+                            {windowWidth < 1168 && (
+                                <div className="project__img">
+                                    <Phone image="triano" openProject={() => window.open('https://triano-restaurant.web.app/')}></Phone>
+                                </div>
+                            )}                            
                             <div className="project__info__framework">
                                 <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
@@ -234,9 +245,12 @@ class Projects extends Component {
                                 <span><span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span></span>
                             </a>
                         </div>
-                        <div className="project__img">
-                            <Phone image="triano" openProject={() => window.open('https://triano-restaurant.web.app/')}></Phone>
-                        </div>
+                        {windowWidth >=  1168 && (
+                            <div className="project__img">
+                                <Phone image="triano" openProject={() => window.open('https://triano-restaurant.web.app/')}></Phone>
+                            </div>
+                        )}
+                        
                     </div>
 
 
@@ -246,7 +260,11 @@ class Projects extends Component {
                             <p className="project__info__desc">
                                 <FormattedMessage id="weatherFinder" defaultMessage="Weather Finder is a website that provides live weather information for any city in the world. The information is provided by the Open Weather API."/>
                             </p>
-
+                            {windowWidth < 1168 && (
+                                <div className="project__img">
+                                    <Phone image="weather"  openProject={() => window.open("https://weather-finder-anja.firebaseapp.com/")}></Phone>
+                                </div>
+                            )}
                             <div className="project__info__framework">
                                 <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
@@ -268,9 +286,12 @@ class Projects extends Component {
                                 <span><span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span></span>
                             </a>
                         </div>
-                        <div className="project__img">
-                            <Phone image="weather"  openProject={() => window.open("https://weather-finder-anja.firebaseapp.com/")}></Phone>
-                        </div>
+                        {windowWidth >= 1168 && (
+                            <div className="project__img">
+                                <Phone image="weather"  openProject={() => window.open("https://weather-finder-anja.firebaseapp.com/")}></Phone>
+                            </div>
+                        )}
+                        
                     </div>
 
                    

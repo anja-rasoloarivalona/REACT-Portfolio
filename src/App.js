@@ -82,7 +82,9 @@ class App extends Component {
         <div className="app__mounting">
             <LandingPage getStartedHandler={this.getStartedHandler}/>
         </div>  
+
         <Sidebar started = {started}/>
+        
         <div className="app__container">  
           <DropDownList 
               selectItemHandler={this.selectLangHandler}

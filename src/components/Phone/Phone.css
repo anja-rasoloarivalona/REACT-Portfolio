@@ -12,6 +12,13 @@
     box-shadow: 6px 8px 20px -9px rgba(41,41,41,1);
 }
 
+@media (max-width: 1167px){
+    .phone {
+        margin-top: 0rem;
+    }
+}
+
+
 .phone__top {
     width: 100%;
     height: calc( (100% -  (26rem * 1.775)) / 2);

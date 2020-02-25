@@ -4,12 +4,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 2rem;
     height: 100vh;
     overflow: scroll;
-    scroll-snap-type: proximity;
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: proximity; */
+    /* scroll-snap-points-y: repeat(100vh); */
+    /* scroll-snap-type: y proximity; */
 }
 
 .projects::-webkit-scrollbar {
@@ -28,6 +27,31 @@
 .project__info {
 width: 55%;
 }
+
+@media (max-width: 1167px){
+    .project {
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+        min-height: unset;
+        padding-left: 0rem;
+    }
+
+    .project:not(:first-child) {
+        margin-top: 3rem;
+    }
+
+    .project:last-child {
+        margin-bottom: 6rem;
+    }
+
+    .project__info {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 .project__info__logs-toggler {
     display: flex;
@@ -59,6 +83,12 @@ width: 55%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 1167px){
+    .project__info__title--woto {
+        width: 50vw;
+    }
 }
 .project__info__title h1 {
     font-size: 4rem;
@@ -93,6 +123,12 @@ h1.project__info__title {
     box-shadow: none;
 }
 
+@media (max-width: 1167px){
+    .project__info__cta  {
+       align-self: center;
+    }
+}
+
 .project__info__cta:hover {
     background: var(--color-primary);
     color: var(--color-white);
@@ -124,6 +160,16 @@ h1.project__info__title {
     justify-content: center;
 }
 
+@media (max-width: 1167px){
+    .project__img {
+        padding-top: 0rem;
+        align-self: center;
+        margin-bottom: 6rem;
+        width: 50vw;
+        background: green;
+    }
+}
+
 .project__img .phone__screen.phone__screen--trimmo {
     background-image: url("../../assets/img/trimmo.PNG");
 }
@@ -147,6 +193,11 @@ h1.project__info__title {
     margin-bottom: 5rem;
 }
 
+@media (max-width: 1167px){
+    .project__info__framework {
+        width: 100%;
+    }
+}
 .project__info__framework__title {
    padding: 1rem 0;
    background: var(--color-grey);
@@ -181,10 +232,25 @@ h1.project__info__title {
     justify-content: center;
 }
 
+@media (max-width: 1167px){
+    .project--woto__frameworkContainer  {
+        margin-top: 5rem;
+        width: 50vw;
+    }
+}
+
 .project--woto__framework {
     width: 70%;
     border-radius: .5rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1167px){
+    .project--woto__framework  {
+        width: 100%;
+    }
 }
 
 .project--woto__framework__list {
@@ -229,14 +295,24 @@ h1.project__info__title {
     width: 35rem;
 }
 
+@media (max-width: 1167px){
+    .project__info__gallery {
+        /* background: red; */
+    }
+    .project__info__gallery__item {
+        width: 50vw;
+    }
+}
+
 .project__info__gallery__item__title {
     padding: 1rem;
-    background: green;
     color: var(--color-white);
     background: var(--color-primary);
     border-top-right-radius: .5rem;
     border-top-left-radius: .5rem;
 }
+
+
 .project__info__gallery__item__img {
     width: 100%;
     height: calc(35rem * 0.536585);
@@ -245,6 +321,13 @@ h1.project__info__title {
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+@media (max-width: 1167px){
+    .project__info__gallery__item__img {
+        height: calc(50vw * 0.536585);
+    }
+}
+
 
 .project__info__gallery__item__img--client {
     background-image: url('../../assets/img/woto-client.PNG');
