@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
 import './Contact.css';
 import Input from '../../components/Input/Input';
-import IconSvg from '../../utilities/svg/svg'
+import IconSvg from '../../utilities/svg/svg';
+import { FormattedMessage, defineMessages, injectIntl } from 'react-intl'
+
+
+const messages = defineMessages({
+    name: {
+        id: "name",
+        defaultMessage: "name"
+    }
+})
 
 class Contact extends Component {
 
@@ -34,6 +43,7 @@ class Contact extends Component {
     }
     render() {
             const {form} = this.state;
+            const {formatMessage } = this.props.intl
 
             return (
                 <div className="contactContainer">  
@@ -49,7 +59,7 @@ class Contact extends Component {
                                         id= "name"
                                         _id= "name"
                                         name="name"
-                                        placeholder="name"
+                                        placeholder= {formatMessage(messages.name)}
                                         value = {form.name.value}
                                         onChange={this.onChangeInput}
                                         required={true}
@@ -61,13 +71,13 @@ class Contact extends Component {
                                         _id="email"                                  
                                         id= "name"
                                         name="name"
-                                        placeholder="email"
+                                        placeholder= 'email'
                                         value = {form.email.value}
                                         onChange={this.onChangeInput}
                                     />
                                 </div>
                                 <div class="contact__form__group">
-                                      <Input
+                                      {/* <Input
                                             control="input"
                                             label="company"
                                             type="text"                                  
@@ -88,7 +98,7 @@ class Contact extends Component {
                                             placeholder="phone number"
                                             value = {form.phoneNumber.value}
                                             onChange={this.onChangeInput}
-                                        />
+                                        /> */}
                                 </div>
                                         <Input
                                             control="textarea"
@@ -135,4 +145,4 @@ class Contact extends Component {
 }
 
 
-export default Contact; 
+export default injectIntl(Contact) ; 

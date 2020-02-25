@@ -1,5 +1,4 @@
-  
-.drop-down-list {
+  .drop-down-list {
     width: 20rem;
     position: relative;
     height: 3rem;
@@ -9,6 +8,7 @@
     border-bottom-right-radius: 5px;
     text-transform: capitalize; 
     font-size: var(--font-size-xs);
+    
 }
 
 .drop-down-list.show {
@@ -48,7 +48,7 @@
 }
 
 .drop-down-list.show .drop-down-list__value svg {
-    transform: rotate(-180deg);
+    transform: translateX(3.5rem);
     fill: var(--color-white)
 }
 

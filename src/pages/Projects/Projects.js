@@ -3,6 +3,7 @@ import './Projects.css';
 import Phone from '../../components/Phone/Phone';
 import IconSvg from "../../utilities/svg/svg";
 import Button from '../../components/Button/Button'
+import { FormattedMessage } from 'react-intl'
 
 class Projects extends Component {
 
@@ -93,12 +94,12 @@ class Projects extends Component {
                                 <div className="project__info__logs-toggler"
                                      onClick={this.toggleShowWotoLogs}
                                 >
-                                    <span>How to login</span>
+                                    <span><FormattedMessage id="howToLogin" defaultMessage="How to login"/></span>
                                     <IconSvg icon="lamp"/>
                                 </div>
                             </div>
                             <p className="project__info__desc">
-                                Woto was my first real project, and by far the most complete and complex. Woto is a car dealership built by a friend of mine. In order to help his business, all by myself I created all the necessary tools: the customer portal allowing users to consult the vehicles as well as a back office allowing a given administrator to manipulate all the data without coding. 
+                                <FormattedMessage id="wotoDescription" defaultMessage="Woto was my first real project, and by far the most complex. Woto is a car dealership built by a friend of mine. In order to help his business, I created all the necessary tools: the customer portal allowing users to consult the vehicles and save them in their account as well as a back office allowing a given administrator to manipulate all the data without coding."/>
                             </p>
 
                             <div className="project__info__gallery">
@@ -124,7 +125,7 @@ class Projects extends Component {
 
                         <div className="project--woto__frameworkContainer">
                             <div className="project--woto__framework">
-                                <h2 className="project__info__framework__title">Framework and Features</h2>
+                                <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project--woto__framework__list">
                                     <li className="project--woto__framework__list__item">
                                         <span className="project--woto__framework__list__item__key">Front-End</span>
@@ -135,27 +136,27 @@ class Projects extends Component {
                                         <span className="project--woto__framework__list__item__value">Node.js</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Data Base</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="dataBase" defaultMessage="Data Base"/></span>
                                         <span className="project--woto__framework__list__item__value">MongoDB</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Image storage</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="imageStorage" defaultMessage="Image Storage"/></span>
                                         <span className="project--woto__framework__list__item__value">Firebase</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Live message and status</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="liveMessageAndStatus" defaultMessage="Live message and status"/></span>
                                         <span className="project--woto__framework__list__item__value">Socket.io</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Currency</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="currency" defaultMessage="Currency"/></span>
                                         <span className="project--woto__framework__list__item__value">Currencylayer API</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Authentication</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="authentification" defaultMessage="Authentification"/></span>
                                         <span className="project--woto__framework__list__item__value">Yes</span>
                                     </li>
                                     <li className="project--woto__framework__list__item">
-                                        <span className="project--woto__framework__list__item__key">Charts</span>
+                                        <span className="project--woto__framework__list__item__key"><FormattedMessage id="charts" defaultMessage="Charts"/></span>
                                         <span className="project--woto__framework__list__item__value">react-chartjs-2</span>
                                     </li>
 
@@ -166,7 +167,7 @@ class Projects extends Component {
                                 onClick={() => window.open('https://trimmo-real-estate.web.app/')}
                                 >
                                 <IconSvg icon="launch"/>
-                                <span>Launch Demo</span>
+                                <span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span>
                             </a>
                             </div>
                            
@@ -179,11 +180,11 @@ class Projects extends Component {
                         <div className="project__info">
                             <h1 className="project__info__title">Trimmo Real Estate</h1>
                             <p className="project__info__desc">
-                                Woto was my first real project, and by far the most complete and complex. Woto is a car dealership built by a friend of mine. In order to help his business, all by myself I created all the necessary tools: the customer portal allowing users to consult the vehicles as well as a back office allowing a given administrator to manipulate all the data without coding. 
+                                <FormattedMessage id="trimmoRealEstate" defaultMessage="Trimmo real estate is a fictitious real estate agency based in Canada. Users can consult the different properties based on price, type, number of bathrooms but mostly on location. As a bonus, they can view all this data on google map."/>
                             </p>
 
                             <div className="project__info__framework">
-                                <h2 className="project__info__framework__title">Framework and Features</h2>
+                                <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
                                     <li className="project__info__framework__list__item">
                                         React & Redux
@@ -201,7 +202,7 @@ class Projects extends Component {
                                 onClick={() => window.open('https://trimmo-real-estate.web.app/')}
                             >
                                 <IconSvg icon="launch" />
-                                <span>Launch Demo</span>
+                                <span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span>
                             </a>
                         </div>
                         <div className="project__img">
@@ -216,10 +217,10 @@ class Projects extends Component {
                        <div className="project__info">
                             <h1 className="project__info__title">Triano Restaurant</h1>
                             <p className="project__info__desc">
-                                Woto was my first real project, and by far the most complete and complex. Woto is a car dealership built by a friend of mine. In order to help his business, all by myself I created all the necessary tools: the customer portal allowing users to consult the vehicles as well as a back office allowing a given administrator to manipulate all the data without coding. 
+                                <FormattedMessage id="trianoRestaurant" defaultMessage="Triano Restaurant is a fictional restaurant based in Montreal. When I developed this website, my goal was to practice as well as to diversify my project portfolio."/>
                             </p>
                             <div className="project__info__framework">
-                                <h2 className="project__info__framework__title">Framework and Features</h2>
+                                <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
                                     <li className="project__info__framework__list__item">
                                         React & Redux
@@ -230,7 +231,7 @@ class Projects extends Component {
                                 onClick={() => window.open('https://triano-restaurant.web.app/')}
                             >
                                 <IconSvg icon="launch"/>
-                                <span>Launch Demo</span>
+                                <span><span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span></span>
                             </a>
                         </div>
                         <div className="project__img">
@@ -243,11 +244,11 @@ class Projects extends Component {
                     <div className="project__info">
                             <h1 className="project__info__title">Weather Finder</h1>
                             <p className="project__info__desc">
-                                Woto was my first real project, and by far the most complete and complex. Woto is a car dealership built by a friend of mine. In order to help his business, all by myself I created all the necessary tools: the customer portal allowing users to consult the vehicles as well as a back office allowing a given administrator to manipulate all the data without coding. 
+                                <FormattedMessage id="weatherFinder" defaultMessage="Weather Finder is a website that provides live weather information for any city in the world. The information is provided by the Open Weather API."/>
                             </p>
 
                             <div className="project__info__framework">
-                                <h2 className="project__info__framework__title">Framework and Features</h2>
+                                <h2 className="project__info__framework__title"><FormattedMessage id="frameworkAndFeatures" defaultMessage="Framework and Features"/></h2>
                                 <ul className="project__info__framework__list">
                                     <li className="project__info__framework__list__item">
                                         React & Redux
@@ -256,7 +257,7 @@ class Projects extends Component {
                                         Open Weather
                                     </li>
                                     <li className="project__info__framework__list__item">
-                                        Search for any city
+                                        <FormattedMessage id='searchForAnyCity' defaultMessage="Search for any city"/>
                                     </li>
                                 </ul>
                             </div>
@@ -264,7 +265,7 @@ class Projects extends Component {
                                 onClick={() => window.open("https://weather-finder-anja.firebaseapp.com/")}
                             >
                                 <IconSvg icon="launch"/>
-                                <span>Launch Demo</span>
+                                <span><span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span></span>
                             </a>
                         </div>
                         <div className="project__img">

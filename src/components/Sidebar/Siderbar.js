@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './Sidebar.css';
 import { NavLink } from 'react-router-dom';
-import IconSvg from '../../utilities/svg/svg'
+import IconSvg from '../../utilities/svg/svg';
+import {FormattedMessage } from 'react-intl'
 
 class Siderbar extends Component {
     render() {
-        const started = this.props.started
+        const started = this.props.started;
         return (
             <div className={`sidebar ${started ? 'started': ''}`}>
                 <div className="sidebar__header">
@@ -22,7 +23,7 @@ class Siderbar extends Component {
                         <NavLink to="/" exact>
                             <div className="sidebar__nav__list__item">
                                 <IconSvg icon="user"/>
-                                <span>about me</span>
+                                <span><FormattedMessage id="aboutMe" defaultMessage="about me"/></span>
                             </div> 
                             <div className="sidebar__nav__list__item__design sidebar__nav__list__item__design--top">
                                 <div className="sidebar__nav__list__item__design__inner"></div>
@@ -34,7 +35,7 @@ class Siderbar extends Component {
                         <NavLink to="projects">
                             <div className="sidebar__nav__list__item">
                                 <IconSvg icon="briefcase"/>
-                                <span>projects</span>
+                                <span><FormattedMessage id="projects" defaultMessage="projects"/></span>
                             </div>  
                             <div className="sidebar__nav__list__item__design sidebar__nav__list__item__design--top">
                                 <div className="sidebar__nav__list__item__design__inner"></div>
@@ -46,7 +47,7 @@ class Siderbar extends Component {
                         <NavLink to="skills">
                             <div className="sidebar__nav__list__item">
                                 <IconSvg icon="cogs"/>
-                                <span>skills</span>
+                                <span><FormattedMessage id="skills" defaultMessage="skills"/></span>
                             </div>    
                             <div className="sidebar__nav__list__item__design sidebar__nav__list__item__design--top">
                                 <div className="sidebar__nav__list__item__design__inner"></div>
@@ -58,7 +59,7 @@ class Siderbar extends Component {
                         <NavLink to="contact">
                             <div className="sidebar__nav__list__item">
                                 <IconSvg icon="chat"/>
-                                <span>contact</span>
+                                <span><FormattedMessage id="contact" defaultMessage="contact"/></span>
                             </div>
                             <div className="sidebar__nav__list__item__design sidebar__nav__list__item__design--top">
                                 <div className="sidebar__nav__list__item__design__inner"></div>

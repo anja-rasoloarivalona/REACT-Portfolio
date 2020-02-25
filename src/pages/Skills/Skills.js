@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import './Skills.css';
+import { FormattedMessage } from 'react-intl'
 
 class Skills extends Component {
     render() {  
     return (
         <section class="skills">
-            <h1 class="skills__title">My Skills</h1>
+            <h1 class="skills__title"><FormattedMessage id="mySkills" defaultMessage="My skills"/></h1>
             <div class="skills__wrapper">
                 <div class="skills__container skills__container--front">
                     <h1 class="skills__container__title">Front-End</h1>
@@ -20,6 +21,7 @@ class Skills extends Component {
                         <li class="skills__container__list__item">ES6</li>
                         <li class="skills__container__list__item">jQuery</li>
                         <li class="skills__container__list__item">React & Redux</li>
+                        <li class="skills__container__list__item">React Native</li>
                         <li class="skills__container__list__item">CSS3 & Sass</li>
                         <li class="skills__container__list__item">Bootstrap4</li>
                         <li class="skills__container__list__item">Git</li>
@@ -40,7 +42,6 @@ class Skills extends Component {
                         <li class="skills__container__list__item">MongoDB</li>
                         <li class="skills__container__list__item">MySQL</li>
                         <li class="skills__container__list__item">REST API</li>
-                        <li class="skills__container__list__item">MongoDB</li>
                     </ul>
                 </div>
                 <div class="skills__container skills__container--business">
