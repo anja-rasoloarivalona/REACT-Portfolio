@@ -8,7 +8,13 @@
     border-bottom-right-radius: 5px;
     text-transform: capitalize; 
     font-size: var(--font-size-xs);
-    
+}
+
+@media (max-width: 565px){
+    .drop-down-list {
+        width: 15rem;
+    }
+
 }
 
 .drop-down-list.show {

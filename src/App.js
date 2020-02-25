@@ -11,6 +11,7 @@ import Contact from './pages/Contact/Contact';
 import { IntlProvider} from 'react-intl';
 import messages from "./messages"
 import queryString from 'query-string';
+import Navbar from './components/Navbar/Navbar';
 
 
 
@@ -72,7 +73,9 @@ class App extends Component {
 
 
   render() {
-    const { started, lang } = this.state
+    const { started, lang } = this.state;
+    let windowWidth = window.innerWidth;
+
 
     return (
       <IntlProvider locale={lang}
@@ -83,8 +86,14 @@ class App extends Component {
             <LandingPage getStartedHandler={this.getStartedHandler}/>
         </div>  
 
-        <Sidebar started = {started}/>
+        {windowWidth < 977 && (
+          <Navbar />
+        )}
+        {( windowWidth >= 977 && 
+          <Sidebar started = {started}/>
+        )}
         
+
         <div className="app__container">  
           <DropDownList 
               selectItemHandler={this.selectLangHandler}

@@ -51,7 +51,10 @@ class Contact extends Component {
                             <h1 className="contact__header__title">Get in touch</h1>
                       </header>
                      <form action="https://formspree.io/rasoloanja@gmail.com" method="POST" class="contact__form">
-                                <div class="contact__form__group">
+                         <div className="contact__form__title">
+                            Let's talk about your project
+                         </div>
+                                <div className="contact__form__group">
                                     <Input
                                         control="input"
                                         label="name"
@@ -76,7 +79,7 @@ class Contact extends Component {
                                         onChange={this.onChangeInput}
                                     />
                                 </div>
-                                <div class="contact__form__group">
+                                <div className="contact__form__group">
                                       {/* <Input
                                             control="input"
                                             label="company"
@@ -100,7 +103,8 @@ class Contact extends Component {
                                             onChange={this.onChangeInput}
                                         /> */}
                                 </div>
-                                        <Input
+                                <div className="contact__form__group">
+                                    <Input
                                             control="textarea"
                                             label="message"
                                             type="text"                                  
@@ -111,26 +115,28 @@ class Contact extends Component {
                                             value = {form.message.value}
                                             onChange={this.onChangeInput}
                                         />
+                                </div>
+                                    
                                 
-                            <input class="button button--primary" id="email-submit" type="submit" value="Send" />
+                            <input className="button button--primary" id="email-submit" type="submit" value="Send" />
                     </form>
 
 
           
                         <ul className="contact__infos-list">
-                           <li className="conact__infos-list__item">
+                           <li className="contact__infos-list__item">
                                 <div className="contact__infos-list__item__icon">
                                     <IconSvg icon="phone"/>
                                 </div>
                                 <span>+1 438 896 2026</span>
                            </li>
-                           <li className="conact__infos-list__item">
+                           <li className="contact__infos-list__item">
                                 <div className="contact__infos-list__item__icon">
                                     <IconSvg icon="mail"/>
                                 </div>
                                 <span>rasoloanja@gmail.com</span>
                            </li>
-                           <li className="conact__infos-list__item">
+                           <li className="contact__infos-list__item">
                                 <div className="contact__infos-list__item__icon">
                                     <IconSvg icon="pin"/>
                                 </div>

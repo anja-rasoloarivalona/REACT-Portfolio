@@ -18,6 +18,27 @@
     }
 }
 
+@media (max-width: 531px){
+    .phone {
+        width: 22rem;
+        height: calc(22rem * 2.148148);
+    }
+}
+
+@media (max-width: 448px){
+    .phone {
+        width: 18rem;
+        height: calc(18rem * 2.148148);
+    }
+}
+
+
+@media (max-width: 357px){
+    .phone {
+        width: 14rem;
+        height: calc(14rem * 2.148148);
+    }
+}
 
 .phone__top {
     width: 100%;
@@ -28,6 +49,23 @@
     position: relative;
 }
 
+@media (max-width: 531px){
+    .phone__top {
+        height: calc( (100% -  (22rem * 1.775)) / 2);
+    }
+}
+
+@media (max-width: 448px){
+    .phone__top {
+        height: calc( (100% -  (18rem * 1.775)) / 2);
+    }
+}
+
+@media (max-width: 357px){
+    .phone__top {
+        height: calc( (100% -  (14rem * 1.775)) / 2);
+    }
+}
 .phone__top__circle {
     width: 1rem;
     height: 1rem;
@@ -57,12 +95,53 @@
     cursor: pointer;
 }
 
+@media (max-width: 531px){
+    .phone__screen {
+        width: 21rem;
+        height: calc(21rem * 1.775);
+    }
+}
+
+@media (max-width: 448px){
+    .phone__screen {
+        width: 17rem;
+        height: calc(17rem * 1.775);
+    }
+}
+
+@media (max-width: 357px){
+    .phone__screen {
+        width: 13rem;
+        height: calc(13rem * 1.775);
+    }
+}
+
+
 .phone__bottom {
     height: calc( (100% -  (26rem * 1.775)) / 2);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 531px){
+    .phone__bottom {
+        height: calc( (100% -  (22rem * 1.775)) / 2);
+    }
+}
+
+@media (max-width: 448px){
+    .phone__bottom {
+        height: calc( (100% -  (18rem * 1.775)) / 2);
+    }
+}
+
+@media (max-width: 357px){
+    .phone__bottom {
+        height: calc( (100% -  (14rem * 1.775)) / 2);
+    }
+
 }
 
 .phone__bottom__btn {

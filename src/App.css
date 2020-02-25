@@ -27,6 +27,13 @@ html {
   overflow-x: hidden;
 }
 
+@media (max-width: 977px){
+  .html {
+      width: 55%;
+  }
+}
+
+
 body {
   font-family: var(--font-primary);
   box-sizing: border-box;
@@ -35,8 +42,10 @@ body {
 
 .app {
   position: relative;
+  
+  
   height: 100vh;
-  overflow-y: hidden; 
+  overflow-y: hidden;  
 }
 
 .app.started {
@@ -68,17 +77,23 @@ body {
 
 
 .app__container {
-  /* transform: translateX(100vw); */
+  transform: translateX(100vw);
   background: var(--color-white);
   width: calc(100vw - 20rem);
   margin-left: 20rem;
-  min-height: 200vh;
+  /* min-height: 200vh; */
   transition: all 2s ease-in;
   z-index: 1;
   position: relative;
-
-
 }
+
+@media (max-width: 977px){
+  .app__container {
+    margin-left: 0rem;
+    width: 100vw;
+  }
+}
+
 
 .app.started .app__container {
    transform: translateX(0);  
@@ -90,6 +105,12 @@ body {
   top: 3rem;
   right: 1.5rem;
   z-index: 10;
+}
+
+@media (max-width: 545px){
+  .app__container .drop-down-list {
+    top: 1rem;
+  }
 
 }
 
