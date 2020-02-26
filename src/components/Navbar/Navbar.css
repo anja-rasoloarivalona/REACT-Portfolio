@@ -92,6 +92,28 @@
     transition: all .3s ease-in;
 }
 
+.navbar__listContainer .drop-down-list {
+    /* position: absolute;
+    bottom: 10rem; */
+    background: var(--color-primary);
+    align-self: center;
+    margin-top: 3rem;
+}
+
+.navbar__listContainer .drop-down-list__value {
+    color: var(--color-white);
+    justify-content: space-between;
+}
+
+.navbar__listContainer .drop-down-list__value svg {
+    margin-right: 1rem;
+}
+
+.navbar__listContainer .drop-down-list.show .drop-down-list__value svg {
+    transform: rotate(180deg);
+}
+
+
 .navbar__listContainer.show {
     transform: translateX(0%);
 }

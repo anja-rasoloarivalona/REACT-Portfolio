@@ -2,12 +2,22 @@ import React, { Component } from 'react'
 import './Navbar.css';
 import { NavLink } from 'react-router-dom'
 import IconSvg from '../../utilities/svg/svg'
+import DropDownList from '../DropDownList/DropDownList';
+import { withRouter } from 'react-router-dom'
+
 
 class Navbar extends Component {
 
     state = {
-        showNavList: false
+        showNavList: false,
     }
+
+      selectLangHandler = fullLang => {
+        this.setState({ showNavList: false}, () => this.props.selectLangHandler(fullLang))
+      }
+
+
+
 
     navListToggler = () => {
         this.setState(prevState => ({
@@ -19,6 +29,7 @@ class Navbar extends Component {
 
         const { showNavList } = this.state;
         const started = this.props.started;
+        let fullLang = this.props.fullLang
 
         return (
             <div className={`navbar ${started ? 'show':''}`}>
@@ -38,7 +49,6 @@ class Navbar extends Component {
                             Anja Rasoloarivalona
                         </div>
                 </div>
-
                 <div className={`navbar__listContainer ${showNavList ? 'show' : ''}`}>
                     <ul className="navbar__list">
                         <NavLink to="/" exact
@@ -58,7 +68,10 @@ class Navbar extends Component {
                          onClick={this.navListToggler}>
                             Contact
                         </NavLink>
-
+                        <DropDownList 
+                            selectItemHandler={this.selectLangHandler}
+                            value={fullLang}
+                        />
                         <div className="navbar__social">
                             <IconSvg icon="linkedin"/>
                             <IconSvg icon="github"/>
@@ -66,11 +79,15 @@ class Navbar extends Component {
                     </ul>
 
                     
+
+                    
                 </div>
+            
+                
             </div>
         )
     }
 }
 
 
-export default Navbar
+export default withRouter(Navbar) 

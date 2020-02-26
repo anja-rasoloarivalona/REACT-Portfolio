@@ -90,7 +90,10 @@ class App extends Component {
           </div>  
 
           {windowWidth < 977 && (
-            <Navbar started={started}/>
+            <Navbar started={started}
+            selectLangHandler={this.selectLangHandler}
+            fullLang={fullLang}
+            />
           )}
           {( windowWidth >= 977 && 
             <Sidebar started = {started}/>
