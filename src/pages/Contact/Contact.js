@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Contact.css';
 import Input from '../../components/Input/Input';
 import IconSvg from '../../utilities/svg/svg';
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl'
+import { defineMessages, injectIntl } from 'react-intl'
 
 
 const messages = defineMessages({

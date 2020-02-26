@@ -18,9 +18,10 @@ class Navbar extends Component {
     render() {
 
         const { showNavList } = this.state;
+        const started = this.props.started;
 
         return (
-            <div className="navbar">
+            <div className={`navbar ${started ? 'show':''}`}>
                 <div className="navbar__toggler"
                     onClick={this.navListToggler}
                 >

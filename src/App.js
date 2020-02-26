@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import { Route, Switch, withRouter} from 'react-router-dom';
 import './App.css';
 import DropDownList from './components/DropDownList/DropDownList'
 import Sidebar from './components/Sidebar/Siderbar';
@@ -20,37 +20,24 @@ class App extends Component {
 
   state = {
     started: false,
-    lang: 'English'
+    lang: 'en',
+    fullLang: 'english'
   }
 
   componentDidMount(){
-    
     let parsedQuery = queryString.parse(this.props.location.search)
-
-    console.log(parsedQuery);
-
     if(parsedQuery){
-      let lang = parsedQuery.lang;
-      let newLang
-      if(lang === 'français'){
-        lang = 'Français'
-        newLang = "French"
+      let fullLang = parsedQuery.lang;
+      let lang;
+      if(fullLang === 'français'){
+        lang = 'fr'
       } else {
-        lang = "English"
-        newLang = "English"
-      }
-
-      
-
-      this.setState({ lang: newLang}, () => this.props.history.push({
+        lang = "en"
+      }      
+      this.setState({ lang: lang, fullLang: fullLang}, () => this.props.history.push({
         pathname: this.props.location.pathname,
-        search: `lang=${lang.toLowerCase()}`
+        search: `lang=${fullLang}`
       }))
-    } else {
-      this.props.history.push({
-        pathname: this.props.location.pathname,
-        search: `lang=${this.state.lang.toLowerCase()}`
-      })
     }
   }
 
@@ -58,22 +45,23 @@ class App extends Component {
     this.setState({ started: true})
   }
 
-  selectLangHandler = lang => {
-    let newLang;
-    if(lang === 'French'){
-      newLang = 'Français'
+  selectLangHandler = fullLang => {
+    let lang;
+    if(fullLang === 'french'){
+      fullLang = 'français'
+      lang = 'fr'
     } else {
-      newLang = "English"
+      lang = "en"
     }
-    this.setState({ lang }, () =>  this.props.history.push({
+    this.setState({ lang, fullLang }, () =>  this.props.history.push({
       pathname: this.props.location.pathname,
-      search: `lang=${newLang.toLowerCase()}`
+      search: `lang=${fullLang}`
     }))
   }
 
 
   render() {
-    const { started, lang } = this.state;
+    const { started, lang, fullLang } = this.state;
     let windowWidth = window.innerWidth;
 
 
@@ -82,30 +70,32 @@ class App extends Component {
                     messages={messages[lang]}
       >
         <div className={`app ${started ? 'started': ''}`}>
-        <div className="app__mounting">
-            <LandingPage getStartedHandler={this.getStartedHandler}/>
-        </div>  
+          
+          <div className="app__mounting">
+              <LandingPage getStartedHandler={this.getStartedHandler}/>
+          </div>  
 
-        {windowWidth < 977 && (
-          <Navbar />
-        )}
-        {( windowWidth >= 977 && 
-          <Sidebar started = {started}/>
-        )}
-        
+          {windowWidth < 977 && (
+            <Navbar started={started}/>
+          )}
+          {( windowWidth >= 977 && 
+            <Sidebar started = {started}/>
+          )}
+          
 
-        <div className="app__container">  
-          <DropDownList 
-              selectItemHandler={this.selectLangHandler}
-              value={lang}
-          />
-          <Switch>
-            <Route exact path="/" component={About}/>
-            <Route path="/projects" component={Projects}/>
-            <Route path="/skills" component={Skills}/>
-            <Route path="/contact" component={Contact}/>
-          </Switch>
-        </div>
+          <div className="app__container">  
+            <DropDownList 
+                selectItemHandler={this.selectLangHandler}
+                value={fullLang}
+            />
+            <Switch>
+              <Route exact path="/" component={About}/>
+              <Route path="/projects" component={Projects}/>
+              <Route path="/skills" component={Skills}/>
+              <Route path="/contact" component={Contact}/>
+            </Switch>
+          </div>
+
         </div>
       </IntlProvider>
       

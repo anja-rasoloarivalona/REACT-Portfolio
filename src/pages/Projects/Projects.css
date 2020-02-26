@@ -1,6 +1,4 @@
 .projects {
-    grid-column: 2 / -1;
-    grid-row: 2 / 3;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,74 +7,53 @@
     scroll-snap-type: proximity;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y proximity;
-}
-
-@media (max-width: 977px){
-    .projects {
-        height: calc(100vh - 7rem);
-        margin-top: 7rem;
-    }
+    padding-left: 8rem;
+    max-width: 140rem;
 }
 
 .projects::-webkit-scrollbar {
     display: none;
 }
 
-
 .project {
     width: 100%;
-    padding-left: 8rem;
     min-height: 100vh;
     scroll-snap-align: start;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content min-content 1fr;
+    column-gap: 3rem;
 }
 
-.project__info {
-width: 55%;
-}
-
-@media (max-width: 1167px){
+@media (max-width: 1186px){
+    .projects {
+        padding-right: 8rem;    
+    }
     .project {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: max-content;
         min-height: unset;
-        padding-left: 0rem;
-    }
-
-    .project:not(:first-child) {
-        margin-top: 3rem;
-    }
-
-    .project:last-child {
-        margin-bottom: 6rem;
-    }
-
-    .project:last-child .project__info  {
-        margin-bottom: 6rem;
-    }
-
-    .project__info {
-        width: 50vw;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 891px){
-    .project__info {
         width: 70vw;
     }
+    .project:last-child {
+        padding-bottom: 6rem;
+    }
 }
 
-@media (max-width: 639px){
-    .project__info {
-        width: 80vw;
+@media (max-width: 690px){
+    .projects {
+        padding-right: 0;    
+        padding-left: 0;
     }
 
+    .project {
+        width: 90vw;
+    }
 }
 
-.project__info__logs-toggler {
+.project__logs-toggler {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,8 +63,7 @@ width: 55%;
     color: var(--color-white);
     cursor: pointer;
 }
-
-.project__info__logs-toggler svg {
+.project__logs-toggler svg {
     width: 2rem;
     height: 2rem;
     fill: rgb(250, 233, 3);
@@ -96,69 +72,85 @@ width: 55%;
 }
 
 
-.project__info__title {
-    align-self: flex-start;
+.project__title {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
     padding: 3rem 0;
     color: var(--color-primary);
 }
 
-.project__info__title--woto {
+.project__title--woto {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-@media (max-width: 1167px){
-    .project__info__title--woto {
-        width: 100%;
+@media (max-width: 690px){
+    .project__title--woto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project__title--woto h1 {
+        margin-bottom: 2rem;
     }
 }
 
+@media (max-width: 1186px){
+    .project__title {
+        align-self: flex-start;
+    }
 
+    .project__title--woto h1 {
+        margin-right: 6rem;
+    }
+}
 
-
-.project__info__title h1 {
+.project__title h1 {
     font-size: 4rem;
     text-transform: uppercase;
 }
 
-h1.project__info__title {
+h1.project__title {
     font-size: 4rem;
     text-transform: uppercase;
 }
 
 @media (max-width: 545px){
-    .project__info__title h1 {
+    .project__title h1 {
         font-size: 2.5rem;
     }
     
-    h1.project__info__title {
+    h1.project__title {
         font-size: 2.5rem;
     }
-
 }
+
+
 
 @media (max-width: 375px){
-    .project__info__title h1 {
+    .project__title h1 {
         font-size: 2rem;
     }
     
-    h1.project__info__title {
+    h1.project__title {
         font-size: 2rem;
     }
-
 }
 
-.project__info__desc {
+.project__desc {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
     width: 100%;
     font-size: 1.4rem;
     line-height: 1.7;
     text-align: justify;
     color: var(--color-grey);
-    margin-bottom: 5rem;
+    padding-bottom: 4rem;
 }
 
-.project__info__cta {
+
+.project__cta {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -173,29 +165,29 @@ h1.project__info__title {
 }
 
 @media (max-width: 1167px){
-    .project__info__cta  {
+    .project__cta  {
        align-self: center;
     }
 }
 
-.project__info__cta:hover {
+.project__cta:hover {
     background: var(--color-primary);
     color: var(--color-white);
     transform: translateY(-.5rem);
     box-shadow: 2px 27px 20px -16px rgba(92,92,92,1);
 }
 
-.project__info__cta:active {
+.project__cta:active {
     transform: translateY(-1px); /*related to the initial link) */
     box-shadow: 0 .5rem 1rem rgba(black,.2); 
 }
 
 
-.project__info__cta:hover svg {
+.project__cta:hover svg {
     fill: var(--color-white)
 }
 
-.project__info__cta svg {
+.project__cta svg {
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
@@ -203,13 +195,13 @@ h1.project__info__title {
 }
 
 .project__img {
-    width: 45%;
-    padding-top: 4rem;
+    grid-row: 2 / -1;
+    grid-column: 2 / 3;
     display: flex;
     justify-content: center;
 }
 
-@media (max-width: 1167px){
+@media (max-width: 1186px){
     .project__img {
         padding-top: 0rem;
         align-self: center;
@@ -230,161 +222,85 @@ h1.project__info__title {
     background-image: url('../../assets/img/weather.PNG');
 }
 
-
-
-
-
-.project__info__framework {
-    width: 40%;
+.project__framework {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
     border-radius: .5rem;
     overflow: hidden;
-    margin-bottom: 5rem;
 }
 
-@media (max-width: 1167px){
-    .project__info__framework {
+@media (max-width: 1186px){
+    .project__framework {
         width: 100%;
+        order: 2;
     }
 }
-.project__info__framework__title {
+.project__framework__title {
    padding: 1rem 0;
    background: var(--color-grey);
    color: var(--color-white);
    padding-left: 1rem;
 }
 
-.project__info__framework__list {
+.project__framework__list {
     list-style: none;
     border-left: 1px solid var(--color-grey);
     border-right: 1px solid var(--color-grey);
     border-bottom: 1px solid var(--color-grey);
     border-bottom-right-radius: .5rem;
     border-bottom-left-radius: .5rem;
-}
-
-.project__info__framework__list__item {
-    padding: 1.2rem 0;
-    padding-left: 1rem;
-    font-size: 1.2rem;
-}
-
-.project__info__framework__list__item:not(:last-child){
-    border-bottom: 1px solid rgb(230, 230, 230);
-}
-
-
-.project--woto__frameworkContainer {
-    margin-top: 11.5rem;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 1167px){
-    .project--woto__frameworkContainer  {
-        margin-top: 5rem;
-        width: 50vw;
-    }
-}
-
-@media (max-width: 891px){
-    .project--woto__frameworkContainer {
-        width: 70vw;
-    }
-
-}
-
-
-@media (max-width: 639px){
-    .project--woto__frameworkContainer {
-        width: 80vw;
-    }
-
-}
-
-
-
-
-.project--woto__framework {
-    width: 70%;
-    border-radius: .5rem;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 1167px){
-    .project--woto__framework  {
-        width: 100%;
-    }
-}
-
-.project--woto__framework__list {
-    list-style: none;
-    border-bottom-right-radius: .5rem;
-    border-bottom-left-radius: .5rem;
-    border-left: 1px solid var(--color-grey);
-    border-right: 1px solid var(--color-grey);
-    border-bottom: 1px solid var(--color-grey);
     margin-bottom: 3rem;
 }
 
-.project--woto__framework__list__item {
-    padding: 1.2rem 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.project__framework__list__item {
+    padding: 1.2rem 1rem;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.project--woto__framework__list__item__value {
-    color: var(--color-grey)
-}
-
-.project--woto__framework__list__item:not(:last-child){
+.project__framework__list__item:not(:last-child){
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
+.project__framework__list__item__value {
+    color: var(--color-grey);
+}
 
 
-
-.project__info__gallery {
+.project__gallery {
+    grid-row: 2 / -1;
+    grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.project__info__gallery__item {
+.project__gallery__item {
     display: flex;
     flex-direction: column;
-    width: 35rem;
+    width: 30vw;
 }
 
-@media (max-width: 1167px){
-    .project__info__gallery {
-        /* background: red; */
+@media (max-width: 1186px){
+    .project__gallery {
+        width: 100%;
+        order: 1;
+        margin-bottom: 5rem;
     }
-    .project__info__gallery__item {
-        width: 50vw;
-    }
-}
-
-@media (max-width: 891px){
-    .project__info__gallery__item {
+    .project__gallery__item {
         width: 70vw;
     }
-
 }
 
-@media (max-width: 639px){
-    .project__info__gallery__item {
-        width: 80vw;
+@media (max-width: 690px){
+    .project__gallery__item {
+        width: 90vw;
     }
-
 }
 
-.project__info__gallery__item__title {
+.project__gallery__item__title {
     padding: 1rem;
     color: var(--color-white);
     background: var(--color-primary);
@@ -393,42 +309,37 @@ h1.project__info__title {
 }
 
 
-.project__info__gallery__item__img {
-    width: 100%;
-    height: calc(35rem * 0.536585);
+.project__gallery__item__img {
+    width: 30vw;
+    height: calc(30vw * 0.536585);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
 }
 
-@media (max-width: 1167px){
-    .project__info__gallery__item__img {
-        height: calc(50vw * 0.536585);
-    }
-}
-
-@media (max-width: 891px){
-    .project__info__gallery__item__img {
+@media (max-width: 1186px){
+    .project__gallery__item__img {
+        width: 70vw;
         height: calc(70vw * 0.536585);
     }
-
 }
 
-@media (max-width: 639px){
-    .project__info__gallery__item__img {
-        height: calc(80vw * 0.536585);
+@media (max-width: 690px){
+    .project__gallery__item__img {
+        width: 90vw;
+        height: calc(90vw * 0.536585);
     }
-
 }
 
 
-.project__info__gallery__item__img--client {
+
+.project__gallery__item__img--client {
     background-image: url('../../assets/img/woto-client.PNG');
     margin-bottom: 6rem;
 }
 
-.project__info__gallery__item__img--admin {
+.project__gallery__item__img--admin {
     background-image: url('../../assets/img/woto-admin.PNG');
 }
 
@@ -447,7 +358,7 @@ h1.project__info__title {
 
 .project__woto__loginContainer.show {
     z-index: 5;
-    transform: translateY(0);
+    transform: translateY(0) translateX(-20rem);
 }
 
 .project__woto__login {

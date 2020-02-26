@@ -1,17 +1,16 @@
 .contactContainer {
-    grid-column: 2 / -1;
-    grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    max-width: 140rem;
     position: relative;
 }
 
 @media (max-width: 977px){
-    .contactContainer  {
+    .contactContainer {
         height: calc(100vh - 7rem);
-        margin-top: 7rem;
     }
 }
 

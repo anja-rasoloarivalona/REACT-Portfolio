@@ -42,8 +42,6 @@ body {
 
 .app {
   position: relative;
-  
-  
   height: 100vh;
   overflow-y: hidden;  
 }
@@ -81,15 +79,22 @@ body {
   background: var(--color-white);
   width: calc(100vw - 20rem);
   margin-left: 20rem;
-  /* min-height: 200vh; */
   transition: all 2s ease-in;
   z-index: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
+.app__container::-webkit-scrollbar {
+  display: none;
+
+
+}
 @media (max-width: 977px){
   .app__container {
     margin-left: 0rem;
+    padding-top: 7rem;
     width: 100vw;
   }
 }

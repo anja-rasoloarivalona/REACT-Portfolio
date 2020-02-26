@@ -5,18 +5,12 @@
     align-items: center;
     background: var(--color-primary);
     height: 100vh;
-    /* width: 100vw; */
+    width: 100vw;
     position: relative;
     transition: all 1s ease-in;
 
 
-    width: 20rem
-}
-
-@media (max-width: 977px){
-    .landing-page {
-        width: 0;
-    }
+    /* width: 20rem */
 }
 
 
@@ -25,12 +19,28 @@
     animation-delay: 1s;
 }
 
+@media (max-width: 977px){
+    .landing-page.started {
+        animation: landingPageGoHide 1s ease-in forwards;
+        animation-delay: 1s;
+    }
+}
+
 @keyframes landingPageGoSmall {
     0% {
         width: 100vw;
     }
     100% {
         width: 20rem;
+    }
+}
+
+@keyframes landingPageGoHide {
+    0% {
+        width: 100vw;
+    }
+    100% {
+        width: 0;
     }
 }
 
@@ -86,13 +96,6 @@
     top: 0;
     bottom: 0;
     margin: auto;
-
-
-    border-radius: 50%;
-    width: 4.8rem;
-    height: 4.8rem;
-    background: var(--color-white);
-    transform: translateY(-43vh);
 }
 
 @media (max-width: 977px){
@@ -118,11 +121,16 @@
       transform: translateY(4rem);
       opacity: 0;
       transition: all .3s ease-in;
-
   }
 
+  @media (max-width: 617px){
+    .landing-page__header__name  {
+       font-size: 2rem;
+    }
+}
+
   .landing-page.mounted .landing-page__header__name {
-    /* animation: headerNameFadeIn .3s ease-in forwards; */
+    animation: headerNameFadeIn .3s ease-in forwards;
     animation-delay: 1s;
   }
 
@@ -159,20 +167,41 @@
       /* background: green; */
   }
 
+  @media (max-width: 617px){
+    .landing-page__header__name__letterContainer {
+       width: 1.6rem;
+       margin-right: 0;
+    }
+}
+
+
   .landing-page__header__name__letterContainer:nth-child(2){
       transform: translateX(.3rem);
   }
 
+  @media (max-width: 617px){
+    .landing-page__header__name__letterContainer:nth-child(2){
+        transform: translateX(0);
+    }
+}
+
   .landing-page.started.mounted .landing-page__header__name__letterContainer.secondary {
      width: 0;
-     /* transition-delay: 2s; */
+     transition-delay: .1s;
   }
 
   .landing-page.started.mounted .landing-page__header__name__letterContainer.main {
     transform: translateX(.7rem);
     margin-right: 0;
-    /* transition-delay: 2s; */
+    transition-delay: .1s;
  }
+
+
+ @media (max-width: 617px){
+    .landing-page.started.mounted .landing-page__header__name__letterContainer.main {
+        transform: translateX(0);
+     }
+}
 
 .landing-page__header__name__letterContainer div {
       position: absolute;
@@ -182,9 +211,9 @@
       right: 0;
       margin: auto;
       text-align: center;
-      /* /* display: flex;
+      display: flex;
       align-items: center;
-      justify-content: center;  */
+      justify-content: center;  
 }
 .landing-page__header__name__letter.landing-page__header__name__letter--guess {
     transform: translateY(-5rem);
@@ -240,6 +269,12 @@
     height: 3rem;
 }
 
+@media (max-width: 415px){
+    .landing-page__header__name__spacer{
+        width: 1rem;
+    }
+}
+
 .landing-page.started .landing-page__header__name__spacer{
     display: none;
 }
@@ -249,12 +284,12 @@
     opacity: 0;
 
 
-    display: none;
+    /* display: none; */
 }
 
 .landing-page.mounted button {
     animation: headerButtonFadeIn .3s ease-in forwards;
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .landing-page.started button {

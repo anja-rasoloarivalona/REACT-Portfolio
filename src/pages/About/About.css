@@ -11,7 +11,7 @@
     .aboutContainer {
         min-height: unset;
         height: calc(100vh - 7rem);
-        margin-top: 7rem;
+        background: var(--color-white);
     }
 }
 

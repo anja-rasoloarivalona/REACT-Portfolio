@@ -8,12 +8,12 @@
     transition: all .5s ease-in;
 
     
-    /* opacity: 0;
-    transform: translateX(-100%); */
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .sidebar.started {
-    /* animation: showSidebar .5s ease-in forwards; */
+    animation: showSidebar .5s ease-in forwards;
     animation-delay: 1.5s;
  }
  
@@ -59,7 +59,7 @@
 }
 
 .sidebar.started .sidebar__header {
-    /* animation: showSidebarHeader .3s ease-in forwards 2s; */
+    animation: showSidebarHeader .3s ease-in forwards 2s;
 }
 
 @keyframes showSidebarHeader {
@@ -133,7 +133,7 @@
 }
 
 .sidebar.started .sidebar__header__name {
-    /* animation: showSidebarHeaderName .3s ease-in forwards 2s; */
+    animation: showSidebarHeaderName .3s ease-in forwards 2s;
 }
 
 @keyframes showSidebarHeaderName {
@@ -263,13 +263,13 @@
     position: absolute;
     bottom: 4rem;
     width: 100%;
-    /* transform: translateY(5rem); */
-    /* opacity: 0; */
+    transform: translateY(5rem);
+    opacity: 0;
     transition: all .5s ease-in;
 }
 
 .sidebar.started .sidebar__social {
-    /* animation: showSidebarSocial .5s ease-in forwards; */
+    animation: showSidebarSocial .5s ease-in forwards;
     animation-delay: 2s;
 }
 

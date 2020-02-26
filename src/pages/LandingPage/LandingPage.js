@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './LandingPage.css';
 import Button from '../../components/Button/Button';
+import { FormattedMessage } from 'react-intl'
 
 class LandingPage extends Component {
 
@@ -27,22 +28,22 @@ class LandingPage extends Component {
 
             <div className={`landing-page ${mounted ? 'mounted': ''} ${started ? 'started': ''}`}>
                 <div className="landing-page__text">
-                    Hi, my name is
+                    <FormattedMessage id="hiMyNameIs" defaultMessage="Hi, my name is"/>
                 </div>                       
                 <div className="landing-page__header">
                         <div className="landing-page__header__name">
                             {this.name.map( (i, index) => {
                                let output;
-                                if(i === 'A'  || i === 'a'){
+                                if(i === 'A'  || i === 'a'){                             
                                     this.counter = this.counter + .7
                                     output = (
                                     <div key={index} className={`landing-page__header__name__letterContainer ${i === 'A' ? 'main': 'secondary'}`}>
                                             <div className="landing-page__header__name__blank"
-                                                 style={{ animationDelay:`${this.counter * .4}s`}}>
+                                                 style={{ animationDelay:`${this.counter * .2}s`}}>
                                                 _
                                             </div>
                                             <div className="landing-page__header__name__letter landing-page__header__name__letter--guess"
-                                                 style={{ animationDelay:`${this.counter * .4}s`}}
+                                                 style={{ animationDelay:`${this.counter * .2}s`}}
                                             >
                                                 {i}
                                             </div>
@@ -57,7 +58,7 @@ class LandingPage extends Component {
                                     )                                     
                                 }                                
                                 if(i === ' '){
-                                    output = <span className="landing-page__header__name__spacer"></span>   
+                                    output = <span key={index} className="landing-page__header__name__spacer"></span>   
                                 }
                                 return output                     
                         })}
@@ -65,7 +66,7 @@ class LandingPage extends Component {
                 </div>
                 <Button color="secondary"
                 onClick={this.getStartedHandler}>
-                        Get started
+                       <FormattedMessage id="getStarted" defaultMessage="Get Started"/>
                 </Button>
             </div>
             

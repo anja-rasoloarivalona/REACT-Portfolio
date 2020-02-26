@@ -9,6 +9,13 @@
     top: 0;
     left: 0;
     z-index: 20;
+    transform: translateY(-100%);
+    transition: all .3s ease-in;
+    transition-delay: 2s;
+}
+
+.navbar.show {
+    transform: translateY(0);
 }
 
 .navbar__toggler {
@@ -86,7 +93,7 @@
 }
 
 .navbar__listContainer.show {
-    transform: none;
+    transform: translateX(0%);
 }
 
 .navbar__list {

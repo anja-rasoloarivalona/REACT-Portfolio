@@ -1,5 +1,5 @@
 export default {
-    French: {
+    fr: {
         // sidebar
         "aboutMe" : "profile",
         "projects": "projets",
@@ -7,8 +7,12 @@ export default {
         "contact": "contact",
         "mySkills": "Mes compétences",
         "name": "nom",
+        "french": "français",
         "French": "français",
         "English": "anglais",
+        "hiMyNameIs": "Bonjour, je m'appelle",
+        "getStarted": "Allons-y",
+        "multiLanguage": "Multilingue",
 
         // about
         "helloMyName": "Bonjour, je m'appelle Anja Rasoloarivalona",
@@ -32,7 +36,7 @@ export default {
         "trianoRestaurant": "Triano Restaurant est un restaurant fictif basé à Montréal. En construisant ce site, mon objectif était de pratiquer ainsi que de diversifier mon portefeuille de projets.",
         "weatherFinder": "Weather Finder est un site internet permettant de connaître les informations météorologiques en direct, de n'importe quelle ville dans le monde. Les informations sont fournies par l'API Open Weather.",
     },
-    English: {
+    en: {
         // sidebar
         "aboutMe" : "about me",
         "projects": "projects",
@@ -64,6 +68,9 @@ export default {
         "mySkills": "My skills",
         "name": "name",
         "French": "french",
-        "English": "english"
+        "English": "english",
+        "hiMyNameIs": "Hi, my name is",
+        "getStarted": "Get started",
+        "multiLanguage": "Multilingual"
     }
 }
