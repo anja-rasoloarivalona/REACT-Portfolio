@@ -26,19 +26,33 @@ class App extends Component {
 
   componentDidMount(){
     let parsedQuery = queryString.parse(this.props.location.search)
-    if(parsedQuery){
+    if(Object.keys(parsedQuery).length > 0){
       let fullLang = parsedQuery.lang;
       let lang;
       if(fullLang === 'français'){
         lang = 'fr'
       } else {
         lang = "en"
-      }      
+      }  
       this.setState({ lang: lang, fullLang: fullLang}, () => this.props.history.push({
         pathname: this.props.location.pathname,
         search: `lang=${fullLang}`
       }))
+    } else {
+      this.props.history.push({
+        pathname: this.props.location.pathname,
+        search: `lang=${this.state.fullLang}`
+      })
     }
+  }
+
+  componentDidUpdate(prevProps){
+   if(prevProps.location.pathname !== this.props.location.pathname){
+     this.props.history.push({
+       pathname: this.props.location.pathname,
+       search: prevProps.location.search
+     })
+   }
   }
 
   getStartedHandler = () => {

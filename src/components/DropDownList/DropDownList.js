@@ -3,19 +3,10 @@ import './DropDownList.css';
 import IconSvg from '../../utilities/svg/svg'
 import { injectIntl, FormattedMessage  } from 'react-intl'
 
-
 class DropDownList extends Component {
 
     state = {
         showList: false
-    }
-
-    componenDidMount(){
-        document.addEventListener('mousedown', this.handleClick, false)
-    }
-    
-    componentWillUnmount(){
-         document.removeEventListener('mousedown', this.handleClick, false)
     }
 
     toggleList = () => {
@@ -25,22 +16,10 @@ class DropDownList extends Component {
         }))
     }
 
-    handleClick = e => {         
-        if(this.target && this.target.contains(e.target)){
-            return
-        } else {
-            if(this.state.showList){
-                this.toggleList()
-            }
-            
-        }     
-    }
-
     render() {
         const {showList} = this.state;
         return (
             <div className={`drop-down-list ${showList ? 'show' : ''}`}
-                 ref={el => this.target = el}
                  onClick={this.toggleList}>
                     <div className="drop-down-list__value">
                         <FormattedMessage id={this.props.value} defaultMessage={this.props.value}/>

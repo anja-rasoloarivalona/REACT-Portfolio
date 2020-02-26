@@ -7,12 +7,20 @@ export default {
         "contact": "contact",
         "mySkills": "Mes compétences",
         "name": "nom",
+
         "french": "français",
-        "French": "français",
+        "français": "français",
+        "english": "anglais",
         "English": "anglais",
+
+
         "hiMyNameIs": "Bonjour, je m'appelle",
         "getStarted": "Allons-y",
         "multiLanguage": "Multilingue",
+        "getInTouch": "Contact",
+        "letstalk": "Parlons de votre projet",
+        "send": "envoyer",
+        "password": "mot de passe",
 
         // about
         "helloMyName": "Bonjour, je m'appelle Anja Rasoloarivalona",
@@ -67,10 +75,23 @@ export default {
         "weatherFinder": "Weather Finder is a website that provides live weather information for any city in the world. The information is provided by the Open Weather API.",
         "mySkills": "My skills",
         "name": "name",
+
+
         "French": "french",
+        "français": "french",
         "English": "english",
+        "english": "english",
+
+
         "hiMyNameIs": "Hi, my name is",
         "getStarted": "Get started",
-        "multiLanguage": "Multilingual"
+        "multiLanguage": "Multilingual",
+
+
+        "getInTouch": "Get in touch",
+        "letstalk": "Let's talk about your project",
+        "send": "send",
+        "password": "password",
+        
     }
 }

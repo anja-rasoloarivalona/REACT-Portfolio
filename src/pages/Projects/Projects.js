@@ -70,7 +70,7 @@ class Projects extends Component {
                                         <span className="project__woto__login__part__list__item__value">woto-admin@mail.com</span>
                                     </li>
                                     <li className="project__woto__login__part__list__item">
-                                        <span className="project__woto__login__part__list__item__key">password</span>
+                                        <span className="project__woto__login__part__list__item__key"><FormattedMessage id="password" defaultMessage="password"/></span>
                                         <span className="project__woto__login__part__list__item__value">Passw0rd</span>
                                     </li>
                                 </ul>

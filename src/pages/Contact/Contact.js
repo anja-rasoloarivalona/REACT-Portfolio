@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 import './Contact.css';
 import Input from '../../components/Input/Input';
 import IconSvg from '../../utilities/svg/svg';
-import { defineMessages, injectIntl } from 'react-intl'
+import { FormattedMessage, defineMessages, injectIntl } from 'react-intl'
 
 
 const messages = defineMessages({
     name: {
         id: "name",
-        defaultMessage: "name"
+        defaultMessage: "name",
+    },
+    send: {
+        id: "send",
+        defaultMessage: "send"
     }
 })
 
@@ -48,11 +52,13 @@ class Contact extends Component {
             return (
                 <div className="contactContainer">  
                       <header className="contact__header">
-                            <h1 className="contact__header__title">Get in touch</h1>
+                            <h1 className="contact__header__title">
+                               <FormattedMessage id="getInTouch" defaultMessage="Get in touch"/> 
+                            </h1>
                       </header>
-                     <form action="https://formspree.io/rasoloanja@gmail.com" method="POST" class="contact__form">
+                     <form action="https://formspree.io/rasoloanja@gmail.com" method="POST" className="contact__form">
                          <div className="contact__form__title">
-                            Let's talk about your project
+                            <FormattedMessage id="letstalk" defaultMessage="Let's talk about your project"/> 
                          </div>
                                 <div className="contact__form__group">
                                     <Input
@@ -118,7 +124,7 @@ class Contact extends Component {
                                 </div>
                                     
                                 
-                            <input className="button button--primary" id="email-submit" type="submit" value="Send" />
+                            <input className="button button--primary" id="email-submit" type="submit" value={formatMessage(messages.send)} />
                     </form>
 
 
