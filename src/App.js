@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, withRouter} from 'react-router-dom';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import './App.css';
 import DropDownList from './components/DropDownList/DropDownList'
 import Sidebar from './components/Sidebar/Siderbar';
@@ -106,10 +106,11 @@ class App extends Component {
                 value={fullLang}
             />
             <Switch>
-              <Route exact path="/" component={About}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/skills" component={Skills}/>
-              <Route path="/contact" component={Contact}/>
+              <Route exact path={process.env.PUBLIC_URL + "/"} component={About}/>
+              <Route path={process.env.PUBLIC_URL + "/projects"}  component={Projects}/>
+              <Route path={process.env.PUBLIC_URL + "/skills"} component={Skills}/>
+              <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact}/>
+              <Redirect to = {process.env.PUBLIC_URL + "/"} />
             </Switch>
           </div>
 
