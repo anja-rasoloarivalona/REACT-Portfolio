@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f14f8fb5.chunk.css",
-    "main.js": "/portfolio/static/js/main.8ed6404f.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.8ed6404f.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.44087e9b.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.44087e9b.js.map",
-    "static/js/2.786740cc.chunk.js": "/portfolio/static/js/2.786740cc.chunk.js",
-    "static/js/2.786740cc.chunk.js.map": "/portfolio/static/js/2.786740cc.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "precache-manifest.e67617ddca0d947cffff4be74464b92b.js": "/portfolio/precache-manifest.e67617ddca0d947cffff4be74464b92b.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.f14f8fb5.chunk.css.map": "/portfolio/static/css/main.f14f8fb5.chunk.css.map",
-    "static/js/2.786740cc.chunk.js.LICENSE": "/portfolio/static/js/2.786740cc.chunk.js.LICENSE",
-    "static/media/Navbar.css": "/portfolio/static/media/prof.5539c020.jpg",
-    "static/media/sprite.svg": "/portfolio/static/media/sprite.17a82619.svg",
-    "static/media/Projects.css": "/portfolio/static/media/woto-client.ff381b8c.PNG"
+    "main.css": "/static/css/main.e889f1cd.chunk.css",
+    "main.js": "/static/js/main.bcd9d1d9.chunk.js",
+    "main.js.map": "/static/js/main.bcd9d1d9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c2b20a0b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c2b20a0b.js.map",
+    "static/js/2.786740cc.chunk.js": "/static/js/2.786740cc.chunk.js",
+    "static/js/2.786740cc.chunk.js.map": "/static/js/2.786740cc.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bee32bd37538784a8735d66ac8b32c0c.js": "/precache-manifest.bee32bd37538784a8735d66ac8b32c0c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e889f1cd.chunk.css.map": "/static/css/main.e889f1cd.chunk.css.map",
+    "static/js/2.786740cc.chunk.js.LICENSE": "/static/js/2.786740cc.chunk.js.LICENSE",
+    "static/media/Navbar.css": "/static/media/prof.5539c020.jpg",
+    "static/media/sprite.svg": "/static/media/sprite.17a82619.svg",
+    "static/media/Projects.css": "/static/media/woto-client.ff381b8c.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.44087e9b.js",
+    "static/js/runtime-main.c2b20a0b.js",
     "static/js/2.786740cc.chunk.js",
-    "static/css/main.f14f8fb5.chunk.css",
-    "static/js/main.8ed6404f.chunk.js"
+    "static/css/main.e889f1cd.chunk.css",
+    "static/js/main.bcd9d1d9.chunk.js"
   ]
 }
