@@ -17,7 +17,7 @@ class About extends Component {
                         </p>
                         <div className="about__cta">
                             <Button color="grey"
-                                    onClick={() => this.props.history.push('/portfolio')}
+                                    onClick={() => this.props.history.push('/projects')}
                             >
                                 <FormattedMessage id="projects" defaultMessage="projects"/>
                             </Button>
