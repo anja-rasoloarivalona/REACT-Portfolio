@@ -43,19 +43,20 @@
 
 @media (max-width: 1261px){
     .contact__form  {
-        width: 50%;;
+        width: 50%;
     }
 }
 
 @media (max-width: 977px){
     .contact__form  {
-        width: 60%;;
+        width: 60%;
+        transform: translateY(0);
     }
 }
 
 @media (max-width: 740px){
     .contact__form  {
-        width: 80%;;
+        width: 80%;
     }
 }
 
@@ -113,14 +114,6 @@
     bottom: 4rem; */
 }
 
-@media (max-width: 977px){
-    .contact {
-        /* flex: 1; */
-        /* height: unset; */
-        /* min-height: 100vh; */
-      
-    }
-}
 
 @media (max-width: 609px){
     .contact__infos-list {
