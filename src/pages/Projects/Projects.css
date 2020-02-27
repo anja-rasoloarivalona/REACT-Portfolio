@@ -4,14 +4,9 @@
     flex-direction: column;
     height: 100vh;
     overflow: scroll;
-    
-    
     scroll-snap-type: proximity;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y proximity;
-
-
-
     padding-left: 8rem;
     max-width: 140rem;
 }
@@ -369,6 +364,12 @@ h1.project__title {
 .project__woto__loginContainer.show {
     z-index: 5;
     transform: translateY(0) translateX(-20rem);
+}
+
+@media (max-width: 977px){
+    .project__woto__loginContainer.show {
+        transform: translateY(0) translateX(0);
+    }
 }
 
 .project__woto__login {

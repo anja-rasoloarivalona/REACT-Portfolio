@@ -1,23 +1,30 @@
-.contactContainer {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     width: 100%;
     max-width: 140rem;
-    position: relative;
+    overflow-y: scroll;
+}
+
+.contact__body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
 }
 
 @media (max-width: 977px){
-    .contactContainer {
-        height: calc(100vh - 7rem);
+    .contact {
+        height: unset;      
     }
 }
 
 .contact__header {
     width: 100%;
-    align-self: flex-start;
-    justify-self: center;
 }
 
 .contact__form {
@@ -30,13 +37,8 @@
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transform: translateY(-5rem);
+    margin-bottom: 3rem;
+    transform: translateY(-8rem);
 }
 
 @media (max-width: 1261px){
@@ -107,13 +109,23 @@
     display: flex;
     align-items: center;
     list-style: none;
-    position: absolute;
-    bottom: 4rem;
+    /* position: absolute;
+    bottom: 4rem; */
+}
+
+@media (max-width: 977px){
+    .contact {
+        /* flex: 1; */
+        /* height: unset; */
+        /* min-height: 100vh; */
+      
+    }
 }
 
 @media (max-width: 609px){
     .contact__infos-list {
         flex-direction: column;
+        margin-bottom: 5rem;
     }
 }
 
