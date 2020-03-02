@@ -143,7 +143,9 @@ class Projects extends Component {
                                     <div className="project__gallery__item__title">
                                         <h3>Client</h3>
                                     </div>
-                                    <div className="project__gallery__item__img project__gallery__item__img--client">
+                                    <div className="project__gallery__item__img project__gallery__item__img--client"
+                                         onClick={() => window.open('https://anja-rasoloarivalona.github.io/Car-dealer/#/Car-dealer/?lang=english&currency=CAD')}
+                                    >
                                     </div>
                                 </div>
                                 <div className="project__gallery__item">
