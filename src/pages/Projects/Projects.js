@@ -38,6 +38,11 @@ class Projects extends Component {
         }     
     }
 
+    openWotoAmdinAndClient = () => {
+        window.open('https://anja-rasoloarivalona.github.io/woto-motors')
+        window.open("https://anja-rasoloarivalona.github.io/woto-motors-admin/")
+    }
+
 
     render() {  
         const {showWotoLogs} = this.state;        
@@ -133,7 +138,7 @@ class Projects extends Component {
                                         </li>                        
                                 </ul>
                                 <div className="project__cta"
-                                    onClick={() => window.open('https://trimmo-real-estate.web.app/')}>
+                                    onClick={this.openWotoAmdinAndClient}>
                                         <IconSvg icon="launch"/>
                                         <span><FormattedMessage id="launchDemo" defaultMessage="Launch Demo"/></span>
                                 </div>         
@@ -144,7 +149,7 @@ class Projects extends Component {
                                         <h3>Client</h3>
                                     </div>
                                     <div className="project__gallery__item__img project__gallery__item__img--client"
-                                         onClick={() => window.open('https://anja-rasoloarivalona.github.io/Car-dealer')}
+                                         onClick={() => window.open('https://anja-rasoloarivalona.github.io/woto-motors')}
                                     >
                                     </div>
                                 </div>
@@ -152,7 +157,8 @@ class Projects extends Component {
                                     <h3 className="project__gallery__item__title">
                                         Admin
                                     </h3>
-                                    <div className="project__gallery__item__img project__gallery__item__img--admin">
+                                    <div className="project__gallery__item__img project__gallery__item__img--admin"
+                                        onClick={() => window.open("https://anja-rasoloarivalona.github.io/woto-motors-admin/")}>
                                     </div>
                                 </div>                                        
                             </div>
