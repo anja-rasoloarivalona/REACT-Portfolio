@@ -59,11 +59,11 @@ class Projects extends Component {
                                 <ul className="project__woto__login__part__list">
                                     <li className="project__woto__login__part__list__item">
                                         <span className="project__woto__login__part__list__item__key">email</span>
-                                        <span className="project__woto__login__part__list__item__value">woto-client@mail.com</span>
+                                        <span className="project__woto__login__part__list__item__value">woto-client@gmail.com</span>
                                     </li>
                                     <li className="project__woto__login__part__list__item">
                                         <span className="project__woto__login__part__list__item__key">password</span>
-                                        <span className="project__woto__login__part__list__item__value">Passw0rd</span>
+                                        <span className="project__woto__login__part__list__item__value">abc123!</span>
                                     </li>
                                 </ul>
                             </div>
@@ -72,11 +72,11 @@ class Projects extends Component {
                                 <ul className="project__woto__login__part__list">
                                     <li className="project__woto__login__part__list__item">
                                         <span className="project__woto__login__part__list__item__key">email</span>
-                                        <span className="project__woto__login__part__list__item__value">woto-admin@mail.com</span>
+                                        <span className="project__woto__login__part__list__item__value">woto-admin@gmail.com</span>
                                     </li>
                                     <li className="project__woto__login__part__list__item">
                                         <span className="project__woto__login__part__list__item__key"><FormattedMessage id="password" defaultMessage="password"/></span>
-                                        <span className="project__woto__login__part__list__item__value">Passw0rd</span>
+                                        <span className="project__woto__login__part__list__item__value">abc123!</span>
                                     </li>
                                 </ul>
                             </div>
