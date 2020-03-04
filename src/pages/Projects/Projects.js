@@ -49,7 +49,7 @@ class Projects extends Component {
             return (
                 <div className="projects"> 
 
-                    
+                    {showWotoLogs && ( 
                     <div className={`project__woto__loginContainer ${showWotoLogs ? 'show' : ''}`}>
                         <div className="project__woto__login"
                          ref={el => this.target = el}>
@@ -85,6 +85,9 @@ class Projects extends Component {
                             </div>
                         </div>
                     </div>
+                    )}
+
+
 
                     <div className="project">
                             <div className="project__title project__title--woto">

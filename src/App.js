@@ -12,6 +12,7 @@ import { IntlProvider} from 'react-intl';
 import messages from "./messages"
 import queryString from 'query-string';
 import Navbar from './components/Navbar/Navbar';
+import { Spring } from 'react-spring/renderprops'
 
 
 
@@ -98,21 +99,38 @@ class App extends Component {
           {( windowWidth >= 977 && 
             <Sidebar started = {started}/>
           )}
-          
 
-          <div className="app__container">  
-            <DropDownList 
-                selectItemHandler={this.selectLangHandler}
-                value={fullLang}
-            />
-            <Switch>
-              <Route exact path={process.env.PUBLIC_URL + "/"} component={About}/>
-              <Route path={process.env.PUBLIC_URL + "/projects"}  component={Projects}/>
-              <Route path={process.env.PUBLIC_URL + "/skills"} component={Skills}/>
-              <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact}/>
-              <Redirect to = {process.env.PUBLIC_URL + "/"} />
-            </Switch>
-          </div>
+
+          {started && (
+
+           
+          
+          <Spring
+            from={{marginTop: 1000}}
+            to={{marginTop: 0}}
+            config={{delay: 2000}}
+          >
+            {props => (
+              <div style={props}>
+                <div className="app__container">  
+                  <DropDownList 
+                      selectItemHandler={this.selectLangHandler}
+                      value={fullLang}
+                  />
+                  <Switch>
+                    <Route exact path={process.env.PUBLIC_URL + "/"} component={About}/>
+                    <Route path={process.env.PUBLIC_URL + "/projects"}  component={Projects}/>
+                    <Route path={process.env.PUBLIC_URL + "/skills"} component={Skills}/>
+                    <Route path={process.env.PUBLIC_URL + "/contact"} component={Contact}/>
+                    <Redirect to = {process.env.PUBLIC_URL + "/"} />
+                  </Switch>
+                </div>
+              </div>
+            )}
+
+          </Spring>
+ )}
+          
 
         </div>
       </IntlProvider>

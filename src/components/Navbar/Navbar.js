@@ -73,8 +73,12 @@ class Navbar extends Component {
                             value={fullLang}
                         />
                         <div className="navbar__social">
-                            <IconSvg icon="linkedin"/>
-                            <IconSvg icon="github"/>
+                            <a href="https://www.linkedin.com/in/anja-rasoloarivalona" target="_blank" rel="noopener noreferrer">
+                                <IconSvg icon="linkedin"/>
+                            </a>
+                             <a href="https://github.com/anja-rasoloarivalona" target="_blank" rel="noopener noreferrer">
+                                <IconSvg icon="github"/>
+                            </a>
                         </div>
                     </ul>
 

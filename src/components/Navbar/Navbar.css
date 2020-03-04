@@ -138,9 +138,6 @@
 
 }
 
-.navbar__list a:not(:last-child){
-    border-bottom: 1px solid var(--color-grey)
-}
 
 .navbar__social {
     display: flex;
@@ -149,6 +146,10 @@
     position: absolute;
     bottom: 4rem;
     width: 100%;
+}
+
+.navbar__social  a {
+    text-decoration: none;
 }
 
 

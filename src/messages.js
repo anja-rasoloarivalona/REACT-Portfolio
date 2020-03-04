@@ -9,6 +9,7 @@ export default {
         "name": "nom",
 
         "french": "français",
+        "French": "français",
         "français": "français",
         "english": "anglais",
         "English": "anglais",

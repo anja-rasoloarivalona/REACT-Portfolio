@@ -4,6 +4,10 @@ import Button from '../../components/Button/Button';
 import {FormattedMessage } from 'react-intl';
 
 class About extends Component {
+    componentDidMount(){
+        console.log('mounted');
+        
+    }
     render() {
             return (
                 <div className="aboutContainer">  

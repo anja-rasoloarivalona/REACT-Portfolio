@@ -71,12 +71,12 @@ class Siderbar extends Component {
                     </ul>                   
                 </nav>
                 <div className="sidebar__social">
-                    <div className="sidebar__social__icon">
+                    <a className="sidebar__social__icon" href="https://www.linkedin.com/in/anja-rasoloarivalona" target="_blank" rel="noopener noreferrer">
                         <IconSvg icon="linkedin"/>
-                    </div>
-                    <div className="sidebar__social__icon">
+                    </a>
+                    <a className="sidebar__social__icon" href="https://github.com/anja-rasoloarivalona" target="_blank" rel="noopener noreferrer">
                         <IconSvg icon="github"/>
-                    </div>
+                    </a>
                 </div>
             </div>
         )
