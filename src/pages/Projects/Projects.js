@@ -152,8 +152,11 @@ class Projects extends Component {
                                         <h3>Client</h3>
                                     </div>
                                     <div className="project__gallery__item__img project__gallery__item__img--client"
-                                         onClick={() => window.open('https://anja-rasoloarivalona.github.io/woto-motors')}
-                                    >
+                                         onClick={() => window.open('https://anja-rasoloarivalona.github.io/woto-motors')}>
+                                        <div className="project__gallery__item__img__layer">
+                                            <span>Click to launch demo</span>
+                                            <IconSvg icon="search"/>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="project__gallery__item">
@@ -162,6 +165,10 @@ class Projects extends Component {
                                     </h3>
                                     <div className="project__gallery__item__img project__gallery__item__img--admin"
                                         onClick={() => window.open("https://anja-rasoloarivalona.github.io/woto-motors-admin/")}>
+                                        <div className="project__gallery__item__img__layer">
+                                            <span>Click to launch demo</span>
+                                            <IconSvg icon="search"/>
+                                        </div>
                                     </div>
                                 </div>                                        
                             </div>

@@ -92,6 +92,7 @@
     background-size: cover;
     border-radius: .2rem;
     cursor: pointer;
+    position: relative;
 }
 
 @media (max-width: 531px){
@@ -113,6 +114,48 @@
         width: 13rem;
         height: calc(13rem * 1.775);
     }
+}
+
+.phone__screen__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(17, 17, 17, 0.747);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.phone__screen__layer svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-white);
+    margin-top: 1rem;
+}
+
+.phone__screen__layer svg,
+.phone__screen__layer span {
+    transition: all .3s ease-in;
+    transform: translateY(2rem);
+    opacity: 0;
+}
+
+.phone__screen:hover .phone__screen__layer {
+    opacity: 1;
+}
+
+.phone__screen:hover .phone__screen__layer span,
+.phone__screen:hover .phone__screen__layer svg {
+    transform: none;
+    opacity: 1;
 }
 
 

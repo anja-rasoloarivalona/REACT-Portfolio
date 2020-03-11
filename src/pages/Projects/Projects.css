@@ -321,6 +321,7 @@ h1.project__title {
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    position: relative;
 }
 
 @media (max-width: 1186px){
@@ -346,6 +347,49 @@ h1.project__title {
 
 .project__gallery__item__img--admin {
     background-image: url('../../assets/img/woto-admin.PNG');
+}
+
+
+.project__gallery__item__img__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(17, 17, 17, 0.747);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.project__gallery__item__img__layer svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-white);
+    margin-top: 1rem;
+}
+
+.project__gallery__item__img__layer svg,
+.project__gallery__item__img__layer span {
+    transition: all .3s ease-in;
+    transform: translateY(2rem);
+    opacity: 0;
+}
+
+.project__gallery__item__img:hover .project__gallery__item__img__layer {
+    opacity: 1;
+}
+
+.project__gallery__item__img:hover .project__gallery__item__img__layer span,
+.project__gallery__item__img:hover .project__gallery__item__img__layer svg {
+    transform: none;
+    opacity: 1;
 }
 
 .project__woto__loginContainer {
